@@ -43,8 +43,26 @@
     <script type="text/javascript"> 
     //Initialize Klaviyo object on page load
     !function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}(); </script>
-        
-    <style>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1976441129059772'); 
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" 
+    src="https://www.facebook.com/tr?id=1976441129059772&ev=PageView
+    &noscript=1"/>
+    </noscript>
+        <!-- End Facebook Pixel Code -->
+        <style>
         .hero-overlay {
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
         }
@@ -281,19 +299,13 @@
     </div>
 
     <script>
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const notif = document.getElementById('notification');
-            notif.classList.remove('translate-y-48');
-            
-            const inputs = e.target.querySelectorAll('input');
-            inputs.forEach(i => i.value = '');
-
-            setTimeout(() => {
-                notif.classList.add('translate-y-48');
-            }, 4000);
-        }
-        
+        document.addEventListener("klaviyoForms", function(e) { 
+        if (e.detail.type == 'submit') { 
+            fbq('track', 'Lead') 
+            console.log('Lead');
+        } 
+        console.log('Something happened');
+        }); 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
