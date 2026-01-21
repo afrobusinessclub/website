@@ -287,24 +287,12 @@
         </div>
     </footer>
 
-    <!-- Notification Logic -->
-    <div id="notification" class="fixed bottom-5 right-5 bg-green-600 text-white px-6 py-4 rounded-lg shadow-xl transform translate-y-48 transition-transform duration-300 z-50">
-        <div class="flex items-center">
-            <i class="fas fa-check-circle text-2xl mr-3"></i>
-            <div>
-                <h4 class="font-bold">You're on the list.</h4>
-                <p class="text-sm">Welcome to the table.</p>
-            </div>
-        </div>
-    </div>
-
     <script>
-        document.addEventListener("klaviyoForms", function(e) { 
-        if (e.detail.type == 'submit') { 
-            fbq('track', 'Lead') 
-            console.log('Lead');
-        } 
-        console.log('Something happened');
+        window.addEventListener("klaviyoForms", function(e) { 
+            if (e.detail.type == 'submit') { 
+                fbq('track', 'Lead') 
+            } 
+            console.log('Something happened');
         }); 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
