@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfroBusinessClub - Montreal</title>
+    <title>AfroBusinessClub - Montréal</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/ABC logo.png">
@@ -79,10 +79,18 @@
 
     <!-- Navigation -->
     <nav class="absolute top-0 w-full z-20 py-6">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-6 relative text-center">
             <a href="#" class="text-2xl font-heading font-bold text-white tracking-wide uppercase">
                 Afro <span class="text-brand-gold">Business</span> Club
             </a>
+            <button
+                id="langToggle"
+                type="button"
+                class="absolute right-6 top-1/2 -translate-y-1/2 text-white/90 hover:text-white text-xs md:text-sm font-semibold border border-white/25 hover:border-white/50 bg-white/5 hover:bg-white/10 px-3 py-2 rounded-md transition"
+                aria-label="Changer la langue"
+            >
+                EN
+            </button>
         </div>
     </nav>
 
@@ -100,12 +108,20 @@
         <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl">
             <!-- Text Content -->
             <h1 class="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white">
-                <span class="text-2xl md:text-3xl font-medium block mt-6 text-gray-200">Learn. Connect. Grow.</span>
+                <span class="text-2xl md:text-3xl font-medium block mt-6 text-gray-200" data-i18n="hero_tagline">Apprendre. Connecter. Grandir.</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto">
-                From high-energy mixers to private strategy boardrooms. Join the ecosystem designed to help you grow your network and build your business.
+            <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto" data-i18n="hero_subtitle">
+                Des mixers à haute énergie aux tables stratégiques privées. Rejoignez l’écosystème conçu pour développer votre réseau et faire grandir votre entreprise.
             </p>
-            
+            <div class="flex flex-col gap-4 justify-center items-center">
+
+                <a href="#join" class="inline-block bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-lg px-10 py-2 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
+                    <span data-i18n="cta_button">Rejoignez la communauté</span>
+                </a>
+                <a href="mastermind.html" class="inline-block bg-brand-light hover:bg-yellow-600 text-brand-dark font-bold text-sm px-3 py-2 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
+                    <span data-i18n="cta_button_2">Le Mastermind</span>
+                </a>        
+            </div>
         </div>
     </header>
 
@@ -114,11 +130,11 @@
         <div class="container mx-auto px-6 max-w-3xl">
             
             <h1 class="font-heading text-4xl md:text-5xl lg:text-7xl font-bold mb-8 text-center">
-                <span class="text-2xl md:text-3xl font-medium block mt-6">For Montreal's Ambitious Afro-Descendant Entrepreneurs.</span>
+                <span class="text-2xl md:text-3xl font-medium block mt-6" data-i18n="intro_heading">Pour les entrepreneur·e·s afro-descendant·e·s ambitieux·ses de Montréal.</span>
             </h1>
             <!-- The Intro Text -->
-            <p class="text-center text-gray-800 mb-12 leading-relaxed">
-                Afro Business Club is a community of intelligent, inspiring professionals and entrepreneurs who love to connect. If you are looking to build relationships and expand your knowledge within business strategy, scaling, and much more then join to the community to get notified of when our next events are happening.
+            <p class="text-center text-gray-800 mb-12 leading-relaxed" data-i18n="intro_body">
+                Afro Business Club est une communauté de professionnel·le·s et d’entrepreneur·e·s brillants et inspirants qui aiment créer des liens. Si vous souhaitez développer des relations et approfondir vos connaissances en stratégie, croissance, passage à l’échelle et bien plus, rejoignez la communauté pour être informé·e de nos prochains événements.
             </p>
 
             <!-- The Form (Moved Here) -->
@@ -136,27 +152,27 @@
                 <!-- Column 1 -->
                 <div>
                     <img src="assets/AfroConnect (65 of 141).jpg" alt="Community members" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
-                    <h3 class="font-heading text-4xl font-bold text-brand-gold mb-4">500+ Members</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Afro Business Club was created recently and our community already spans more than 500 members. Needless to say, it's growing fast!
+                    <h3 class="font-heading text-4xl font-bold text-brand-gold mb-4" data-i18n="stats_members_title">500+ membres</h3>
+                    <p class="text-gray-400 leading-relaxed" data-i18n="stats_members_body">
+                        Afro Business Club a été créé récemment et notre communauté compte déjà plus de 500 membres. Autant dire que ça grandit vite.
                     </p>
                 </div>
 
                 <!-- Column 2 -->
                 <div>
                     <img src="assets/40-IMG_4370.jpg" alt="Exciting events" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
-                    <h3 class="font-heading text-2xl font-bold text-white mb-4">Exciting Events</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        Are you ready to join in on the fun? We host entrepreneur-related events including mixers, live shows, panels, and more.
+                    <h3 class="font-heading text-2xl font-bold text-white mb-4" data-i18n="events_title">Événements dynamiques</h3>
+                    <p class="text-gray-400 leading-relaxed" data-i18n="events_body">
+                        Prêt·e à nous rejoindre? Nous organisons des événements autour de l’entrepreneuriat: mixers, shows en direct, panels, et plus encore.
                     </p>
                 </div>
 
                 <!-- Column 3 -->
                 <div>
                     <img src="assets/AfroConnect (108 of 141).jpg" alt="Building connections" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
-                    <h3 class="font-heading text-2xl font-bold text-white mb-4">Build Connections</h3>
-                    <p class="text-gray-400 leading-relaxed">
-                        As a member, discover a wide range of people in our diverse community to meet and build relationships with. Your network is your net worth!
+                    <h3 class="font-heading text-2xl font-bold text-white mb-4" data-i18n="connections_title">Créez des liens</h3>
+                    <p class="text-gray-400 leading-relaxed" data-i18n="connections_body">
+                        En tant que membre, rencontrez une grande diversité de personnes et créez de vraies relations. Votre réseau, c’est votre capital.
                     </p>
                 </div>
 
@@ -172,8 +188,8 @@
                 <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold"></div>
                 
                 <div class="text-center mb-8">
-                    <h3 class="font-heading text-2xl font-bold text-brand-dark">Join the Network</h3>
-                    <p class="text-sm text-gray-500 mt-2">Join 500+ local founders & professionals. No spam, just opportunity.</p>
+                    <h3 class="font-heading text-2xl font-bold text-brand-dark" data-i18n="form_title">Rejoignez le réseau</h3>
+                    <p class="text-sm text-gray-500 mt-2" data-i18n="form_subtitle">Rejoignez 500+ fondateur·rice·s et professionnel·le·s locaux. Pas de spam, juste des opportunités.</p>
                 </div>
                 
                 <div class="klaviyo-form-TUywsZ"></div>
@@ -185,7 +201,7 @@
     <section class="py-20 bg-brand-light">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark">A Room For Every Stage of Growth.</h2>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark" data-i18n="pillars_heading">Un espace pour chaque étape de votre croissance.</h2>
                 <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
             </div>
 
@@ -196,16 +212,16 @@
                     <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold z-10"></div>
                     <div class="relative z-10">
                         <div class="mb-6">
-                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Social</span>
+                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide" data-i18n="pillar1_badge">Social</span>
                         </div>
                         <h3 class="font-heading text-2xl font-bold mb-6 text-white">Afro Connect Mixers</h3>
                         
                         <div class="space-y-4 text-sm">
-                            <p><span class="font-bold text-gray-200">The Vibe:</span> <span class="text-gray-400">High Energy & Open Access.</span></p>
-                            <p><span class="font-bold text-gray-200">For:</span> <span class="text-gray-400">Professionals, Creatives, and Entrepreneurs.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar1_vibe">Haute énergie & accès ouvert.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_for">Pour:</span> <span class="text-gray-400" data-i18n="pillar1_for">Professionnel·le·s, créatif·ve·s et entrepreneur·e·s.</span></p>
                             <div class="pt-4 border-t border-gray-700">
-                                <span class="font-bold text-gray-200 block mb-1">The Promise:</span>
-                                <p class="text-gray-400 italic">Meet your next co-founder, client, hire or friend over a drink in a curated, high-vibration venue.</p>
+                                <span class="font-bold text-gray-200 block mb-1" data-i18n="label_promise">La promesse:</span>
+                                <p class="text-gray-400 italic" data-i18n="pillar1_promise">Rencontrez votre prochain·e cofondateur·rice, client·e, recrue ou ami·e autour d’un verre, dans un lieu soigneusement sélectionné.</p>
                             </div>
                         </div>
                     </div>
@@ -217,16 +233,16 @@
                     <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold z-10"></div>
                     <div class="relative z-10">
                         <div class="mb-6">
-                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Skills</span>
+                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide" data-i18n="pillar2_badge">Compétences</span>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold mb-6 text-white">Growth Workshops</h3>
+                        <h3 class="font-heading text-2xl font-bold mb-6 text-white" data-i18n="pillar2_title">Ateliers de croissance</h3>
                         
                         <div class="space-y-4 text-sm">
-                            <p><span class="font-bold text-gray-200">The Vibe:</span> <span class="text-gray-400">Notebooks Open & Tactical.</span></p>
-                            <p><span class="font-bold text-gray-200">For:</span> <span class="text-gray-400">Operators ready to optimize.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe_2">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar2_vibe">Carnets ouverts & actionnable.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_for_2">Pour:</span> <span class="text-gray-400" data-i18n="pillar2_for">Opérateur·rice·s prêt·e·s à optimiser.</span></p>
                             <div class="pt-4 border-t border-gray-700">
-                                <span class="font-bold text-gray-200 block mb-1">The Promise:</span>
-                                <p class="text-gray-400 italic">Deep dives into, Investing, Sales Funnels, Legal Structures, Operations, and more. Walk away with new skills and assets.</p>
+                                <span class="font-bold text-gray-200 block mb-1" data-i18n="label_promise_2">La promesse:</span>
+                                <p class="text-gray-400 italic" data-i18n="pillar2_promise">Approfondissements sur l’investissement, les tunnels de vente, les structures juridiques, les opérations, et plus. Repartez avec des compétences et des ressources concrètes.</p>
                             </div>
                         </div>
                     </div>
@@ -238,16 +254,16 @@
                     <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold z-10"></div>
                     <div class="relative z-10">
                         <div class="mb-6">
-                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Strategy</span>
+                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide" data-i18n="pillar3_badge">Stratégie</span>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold mb-6 text-white">The Business Club</h3>
+                        <h3 class="font-heading text-2xl font-bold mb-6 text-white" data-i18n="pillar3_title">Le Business Club</h3>
                         
                         <div class="space-y-4 text-sm">
-                            <p><span class="font-bold text-gray-200">The Vibe:</span> <span class="text-gray-400">Closed Door & Confidential.</span></p>
-                            <p><span class="font-bold text-gray-200">For:</span> <span class="text-gray-400">Vetted Founders generating revenue.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe_3">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar3_vibe">À huis clos & confidentiel.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_for_3">Pour:</span> <span class="text-gray-400" data-i18n="pillar3_for">Fondateur·rice·s sélectionné·e·s qui génèrent des revenus.</span></p>
                             <div class="pt-4 border-t border-gray-700">
-                                <span class="font-bold text-gray-200 block mb-1">The Promise:</span>
-                                <p class="text-gray-400 italic">A private boardroom session followed by a curated dinner. We dissect business models and solve bottlenecks in real-time using our signature 'Hot Seat' format.</p>
+                                <span class="font-bold text-gray-200 block mb-1" data-i18n="label_promise_3">La promesse:</span>
+                                <p class="text-gray-400 italic" data-i18n="pillar3_promise">Une session privée type boardroom suivie d’un dîner soigneusement choisi. Nous décortiquons les modèles d’affaires et résolvons les blocages en temps réel avec notre format signature « Hot Seat ».</p>
                             </div>
                         </div>
                     </div>
@@ -263,15 +279,15 @@
         <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold opacity-5 rounded-full filter blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
         
         <div class="container mx-auto px-6 text-center relative z-10">
-            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
-                Your Network is Your Net Worth.
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4" data-i18n="cta_heading">
+                Votre réseau, c’est votre capital.
             </h2>
-            <p class="text-xl text-gray-400 mb-10 font-light max-w-2xl mx-auto">
-                You are one conversation away from your next partner, client, or breakthrough. Don't miss the next invitation.
+            <p class="text-xl text-gray-400 mb-10 font-light max-w-2xl mx-auto" data-i18n="cta_body">
+                Vous êtes à une conversation de votre prochain·e partenaire, client·e ou déclic. Ne manquez pas la prochaine invitation.
             </p>
             
-            <a href="#join" class="inline-block bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-lg px-10 py-4 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
-                Get Access Now
+            <a href="#join" class="inline-block bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-lg px-10 py-2 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
+                <span data-i18n="cta_button">Rejoignez la communauté</span>
             </a>
         </div>
     </section>
@@ -282,12 +298,133 @@
 
             
             <div class="text-xs text-gray-600">
-                &copy; 2026 Afro Business Club. All rights reserved.
+                <span data-i18n="footer_rights">&copy; 2026 Afro Business Club. Tous droits réservés.</span>
             </div>
         </div>
     </footer>
 
     <script>
+        const I18N = {
+            fr: {
+                page_title: "AfroBusinessClub - Montréal",
+                hero_tagline: "Apprendre. Connecter. Grandir.",
+                hero_subtitle: "Des mixers à haute énergie aux tables stratégiques privées. Rejoignez l’écosystème conçu pour développer votre réseau et faire grandir votre entreprise.",
+                intro_heading: "Pour les entrepreneur·e·s afro-descendant·e·s ambitieux·ses de Montréal.",
+                intro_body: "Afro Business Club est une communauté de professionnel·le·s et d’entrepreneur·e·s brillants et inspirants qui aiment créer des liens. Si vous souhaitez développer des relations et approfondir vos connaissances en stratégie, croissance, passage à l’échelle et bien plus, rejoignez la communauté pour être informé·e de nos prochains événements.",
+                stats_members_title: "500+ membres",
+                stats_members_body: "Afro Business Club a été créé récemment et notre communauté compte déjà plus de 500 membres. Autant dire que ça grandit vite.",
+                events_title: "Événements dynamiques",
+                events_body: "Prêt·e à nous rejoindre? Nous organisons des événements autour de l’entrepreneuriat: mixers, shows en direct, panels, et plus encore.",
+                connections_title: "Créez des liens",
+                connections_body: "En tant que membre, rencontrez une grande diversité de personnes et créez de vraies relations. Votre réseau, c’est votre capital.",
+                form_title: "Rejoignez le réseau",
+                form_subtitle: "Rejoignez 500+ fondateur·rice·s et professionnel·le·s locaux. Pas de spam, juste des opportunités.",
+                pillars_heading: "Un espace pour chaque étape de votre croissance.",
+                pillar1_badge: "Social",
+                label_vibe: "L’ambiance:",
+                pillar1_vibe: "Haute énergie & accès ouvert.",
+                label_for: "Pour:",
+                pillar1_for: "Professionnel·le·s, créatif·ve·s et entrepreneur·e·s.",
+                label_promise: "La promesse:",
+                pillar1_promise: "Rencontrez votre prochain·e cofondateur·rice, client·e, recrue ou ami·e autour d’un verre, dans un lieu soigneusement sélectionné.",
+                pillar2_badge: "Compétences",
+                pillar2_title: "Ateliers de croissance",
+                label_vibe_2: "L’ambiance:",
+                pillar2_vibe: "Carnets ouverts & actionnable.",
+                label_for_2: "Pour:",
+                pillar2_for: "Opérateur·rice·s prêt·e·s à optimiser.",
+                label_promise_2: "La promesse:",
+                pillar2_promise: "Approfondissements sur l’investissement, les tunnels de vente, les structures juridiques, les opérations, et plus. Repartez avec des compétences et des ressources concrètes.",
+                pillar3_badge: "Stratégie",
+                pillar3_title: "Le Business Club",
+                label_vibe_3: "L’ambiance:",
+                pillar3_vibe: "À huis clos & confidentiel.",
+                label_for_3: "Pour:",
+                pillar3_for: "Fondateur·rice·s sélectionné·e·s qui génèrent des revenus.",
+                label_promise_3: "La promesse:",
+                pillar3_promise: "Une session privée type boardroom suivie d’un dîner soigneusement choisi. Nous décortiquons les modèles d’affaires et résolvons les blocages en temps réel avec notre format signature « Hot Seat ».",
+                cta_heading: "Votre réseau, c’est votre capital.",
+                cta_body: "Vous êtes à une conversation de votre prochain·e partenaire, client·e ou déclic. Ne manquez pas la prochaine invitation.",
+                cta_button: "Rejoignez la communauté",
+                cta_button_2: "Le Mastermind",
+                footer_rights: "© 2026 Afro Business Club. Tous droits réservés."
+            },
+            en: {
+                page_title: "AfroBusinessClub - Montreal",
+                hero_tagline: "Learn. Connect. Grow.",
+                hero_subtitle: "From high-energy mixers to private strategy boardrooms. Join the ecosystem designed to help you grow your network and build your business.",
+                intro_heading: "For Montreal's Ambitious Afro-Descendant Entrepreneurs.",
+                intro_body: "Afro Business Club is a community of intelligent, inspiring professionals and entrepreneurs who love to connect. If you are looking to build relationships and expand your knowledge within business strategy, scaling, and much more then join to the community to get notified of when our next events are happening.",
+                stats_members_title: "500+ Members",
+                stats_members_body: "Afro Business Club was created recently and our community already spans more than 500 members. Needless to say, it's growing fast!",
+                events_title: "Exciting Events",
+                events_body: "Are you ready to join in on the fun? We host entrepreneur-related events including mixers, live shows, panels, and more.",
+                connections_title: "Build Connections",
+                connections_body: "As a member, discover a wide range of people in our diverse community to meet and build relationships with. Your network is your net worth!",
+                form_title: "Join the Network",
+                form_subtitle: "Join 500+ local founders & professionals. No spam, just opportunity.",
+                pillars_heading: "A Room For Every Stage of Growth.",
+                pillar1_badge: "Social",
+                label_vibe: "The Vibe:",
+                pillar1_vibe: "High Energy & Open Access.",
+                label_for: "For:",
+                pillar1_for: "Professionals, Creatives, and Entrepreneurs.",
+                label_promise: "The Promise:",
+                pillar1_promise: "Meet your next co-founder, client, hire or friend over a drink in a curated, high-vibration venue.",
+                pillar2_badge: "Skills",
+                pillar2_title: "Growth Workshops",
+                label_vibe_2: "The Vibe:",
+                pillar2_vibe: "Notebooks Open & Tactical.",
+                label_for_2: "For:",
+                pillar2_for: "Operators ready to optimize.",
+                label_promise_2: "The Promise:",
+                pillar2_promise: "Deep dives into, Investing, Sales Funnels, Legal Structures, Operations, and more. Walk away with new skills and assets.",
+                pillar3_badge: "Strategy",
+                pillar3_title: "The Business Club",
+                label_vibe_3: "The Vibe:",
+                pillar3_vibe: "Closed Door & Confidential.",
+                label_for_3: "For:",
+                pillar3_for: "Vetted Founders generating revenue.",
+                label_promise_3: "The Promise:",
+                pillar3_promise: "A private boardroom session followed by a curated dinner. We dissect business models and solve bottlenecks in real-time using our signature 'Hot Seat' format.",
+                cta_heading: "Your Network is Your Net Worth.",
+                cta_body: "You are one conversation away from your next partner, client, or breakthrough. Don't miss the next invitation.",
+                cta_button: "Join the Community",
+                cta_button_2: "The Mastermind",
+                footer_rights: "© 2026 Afro Business Club. All rights reserved."
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = I18N[lang] || I18N.fr;
+            document.documentElement.lang = lang;
+            document.title = dict.page_title;
+
+            document.querySelectorAll("[data-i18n]").forEach((el) => {
+                const key = el.getAttribute("data-i18n");
+                if (!key || dict[key] == null) return;
+                el.textContent = dict[key];
+            });
+
+            const toggle = document.getElementById("langToggle");
+            if (toggle) {
+                toggle.textContent = lang === "fr" ? "EN" : "FR";
+                toggle.setAttribute("aria-label", lang === "fr" ? "Switch to English" : "Passer en français");
+            }
+
+            try {
+                localStorage.setItem("abc_lang", lang);
+            } catch {}
+        }
+
+        function getInitialLanguage() {
+            try {
+                const saved = localStorage.getItem("abc_lang");
+                if (saved === "en" || saved === "fr") return saved;
+            } catch {}
+            return "fr";
+        }
+
         window.addEventListener("klaviyoForms", function(e) { 
             if (e.detail.type == 'submit') { 
                 fbq('track', 'Lead') 
@@ -302,6 +439,15 @@
                 });
             });
         });
+
+        setLanguage(getInitialLanguage());
+        const langToggle = document.getElementById("langToggle");
+        if (langToggle) {
+            langToggle.addEventListener("click", () => {
+                const current = document.documentElement.lang === "en" ? "en" : "fr";
+                setLanguage(current === "fr" ? "en" : "fr");
+            });
+        }
     </script>
 </body>
 </html>
