@@ -486,6 +486,12 @@
       });
     });
 
+    window.addEventListener("klaviyoForms", function(e) { 
+            if (e.detail.type == 'submit') { 
+                fbq('track', 'Lead') 
+            } 
+    }); 
+
     (function () {
       const track = document.getElementById("abcCarouselTrack");
       if (!track) return;
