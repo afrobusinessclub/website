@@ -106,29 +106,29 @@
           Rencontre avec 10 à 15 entrepreneurs afro-descendants à Montréal.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="#candidature"
-            class="inline-flex bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-base md:text-lg px-10 py-4 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide"
-          >
+        <!-- VSL Video Section -->
+        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video" id="vsl-container">
+          <!-- YouTube IFrame Target -->
+          <div id="vsl-player" class="w-full h-full"></div>
+          
+          <!-- Unmute Overlay -->
+          <div id="unmute-overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-black/60 cursor-pointer transition hover:bg-black/40 z-20">
+            <div class="bg-brand-gold text-brand-dark px-6 py-3 rounded-full flex items-center gap-3 font-bold animate-pulse shadow-2xl">
+              <i class="fa-solid fa-volume-high"></i>
+              <span>ACTIVER LE SON</span>
+            </div>
+            <p class="text-white/60 text-xs mt-4 uppercase tracking-widest font-medium">Cliquer pour entendre le message</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+          <a href="#candidature" class="inline-flex bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-base md:text-lg px-10 py-4 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
             DÉPOSER MA CANDIDATURE
           </a>
-          <a
-            href="#la-table"
-            class="inline-flex items-center justify-center border border-white/25 hover:border-white/45 text-white/90 hover:text-white font-semibold text-base md:text-lg px-10 py-4 rounded-md transition bg-white/5 hover:bg-white/10"
-          >
+          <a href="#la-table" class="inline-flex items-center justify-center border border-white/25 hover:border-white/45 text-white/90 hover:text-white font-semibold text-base md:text-lg px-10 py-4 rounded-md transition bg-white/5 hover:bg-white/10">
             Voir La Table en images
             <i class="fa-solid fa-arrow-right-long ml-3 text-brand-gold"></i>
           </a>
-        </div>
-
-        <div class="mt-10 max-w-3xl mx-auto">
-          <div class="bg-black/35 border border-white/15 rounded-xl px-6 py-4 text-sm md:text-base text-gray-200">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-center gap-2 md:gap-6">
-              <span class="font-semibold text-white">Clôture des candidatures:</span>
-              <span class="text-brand-gold font-bold">30 mars</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -256,91 +256,12 @@
     </div>
   </section>
 
-  <!-- LA SOLUTION -->
-  <section class="py-20 bg-brand-light">
-    <div class="container mx-auto px-6 max-w-6xl">
-      <div class="text-center mb-16">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark">
-          La solution: un collectif qui règle les vrais blocages.
-        </h2>
-        <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
-        <p class="text-gray-700 mt-6 leading-relaxed max-w-3xl mx-auto">
-          10 à 15 entrepreneurs établis. On va droit au point. Vous repartez avec des décisions, un plan, et des connexions utiles.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-4 gap-6">
-        <div class="elite-card rounded-2xl border border-gray-200 bg-white p-7 shadow-lg">
-          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">Exemple</p>
-          <h3 class="font-heading text-xl font-bold text-brand-dark mb-3">Traffic</h3>
-          <p class="text-gray-700 leading-relaxed text-sm">
-            Acquisition, canaux, contenu, partenariats, ads. On cherche le levier, pas la nouvelle astuce.
-          </p>
-        </div>
-
-        <div class="elite-card rounded-2xl border border-gray-200 bg-white p-7 shadow-lg">
-          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">Exemple</p>
-          <h3 class="font-heading text-xl font-bold text-brand-dark mb-3">Conversion</h3>
-          <p class="text-gray-700 leading-relaxed text-sm">
-            Offre, positionnement, funnel, vente. On clarifie et on simplifie pour vendre.
-          </p>
-        </div>
-
-        <div class="elite-card rounded-2xl border border-gray-200 bg-white p-7 shadow-lg">
-          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">Exemple</p>
-          <h3 class="font-heading text-xl font-bold text-brand-dark mb-3">Opérations</h3>
-          <p class="text-gray-700 leading-relaxed text-sm">
-            Process, KPI, cashflow, livraison. On rend l’entreprise plus stable et plus simple.
-          </p>
-        </div>
-
-        <div class="elite-card rounded-2xl border border-gray-200 bg-white p-7 shadow-lg">
-          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">Exemple</p>
-          <h3 class="font-heading text-xl font-bold text-brand-dark mb-3">Délégation</h3>
-          <p class="text-gray-700 leading-relaxed text-sm">
-            Recrutement, onboarding, structure. Vous récupérez du temps et vous montez une équipe fiable.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-10 text-center">
-        <p class="text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Ces thèmes sont des exemples. On peut aussi travailler sur le pricing, l’offre, le cashflow, les partenariats, le recrutement, le produit, la marque, la stratégie, et tout ce qui limite votre croissance.
-        </p>
-      </div>
-
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="elite-card rounded-2xl border border-gray-200 bg-white p-7 shadow-lg">
-          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">Connexion</p>
-          <h3 class="font-heading text-xl font-bold text-brand-dark mb-3">Pairs qui se comprennent</h3>
-          <p class="text-gray-700 leading-relaxed text-sm">
-            Vous créez des relations solides. Pas des contacts. Des pairs avec qui parler vrai et avancer.
-          </p>
-        </div>
-        <div class="elite-card rounded-2xl border border-gray-200 bg-white p-7 shadow-lg">
-          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">Business</p>
-          <h3 class="font-heading text-xl font-bold text-brand-dark mb-3">Collaborations</h3>
-          <p class="text-gray-700 leading-relaxed text-sm">
-            On se branche sur des opportunités. Partenariats, deals, introductions, projets communs.
-          </p>
-        </div>
-        <div class="elite-card rounded-2xl border border-gray-200 bg-white p-7 shadow-lg">
-          <p class="text-xs font-bold tracking-[0.2em] uppercase text-gray-500 mb-3">Références</p>
-          <h3 class="font-heading text-xl font-bold text-brand-dark mb-3">Referrals</h3>
-          <p class="text-gray-700 leading-relaxed text-sm">
-            Vous donnez et vous recevez des referrals qualifiés. On garde la barre haute sur la qualité.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- L'EXCLUSIVITÉ -->
   <section class="py-20 bg-white border-t border-gray-200">
     <div class="container mx-auto px-6 max-w-5xl">
       <div class="text-center mb-14">
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark">
-          L’exclusivité n’est pas un marketing. C’est une condition de performance.
+          Le Mastermind du Afro Business Club.
         </h2>
         <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
         <p class="text-gray-700 mt-6 leading-relaxed max-w-3xl mx-auto">
@@ -402,9 +323,6 @@
       <div class="text-center mb-14">
         <h2 class="font-heading text-3xl md:text-4xl font-bold">Le process de sélection</h2>
         <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
-        <p class="text-gray-300 mt-6 leading-relaxed max-w-3xl mx-auto">
-          Vous ne rejoignez pas. Vous êtes sélectionné. Le niveau de la table dépend de chaque personne.
-        </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -433,9 +351,6 @@
 
       <div class="mt-12 text-center">
         <div class="inline-flex flex-col sm:flex-row items-center gap-3 bg-black/35 border border-white/10 rounded-xl px-6 py-4">
-          <p class="text-gray-200 text-sm">
-            <span class="font-semibold text-white">Clôture:</span> 30 mars.
-          </p>
           <a
             href="#candidature"
             class="inline-flex bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-sm px-6 py-3 rounded-md shadow-lg transition transform hover:-translate-y-0.5 uppercase tracking-wide"
@@ -464,17 +379,6 @@
 
           <div class="klaviyo-form-VuGr33"></div>
 
-          <div id="calendly-container" class="hidden border-t border-gray-200 pt-8 transition-all duration-500">
-            <div class="text-center mb-6">
-              <h3 class="font-heading text-2xl font-bold text-brand-dark">Merci ! Dernière étape :</h3>
-              <p class="text-gray-600 mt-2">Sélectionnez une date pour votre appel de qualification ci-dessous.</p>
-            </div>
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/kevin-afrobusinessclub/30min" style="min-width:320px;height:900px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-          </div>
-
       </div>
     </div>
   </section>
@@ -487,7 +391,53 @@
     </div>
   </footer>
 
+  <script src="https://www.youtube.com/iframe_api"></script>
+
   <script>
+
+    // --- VSL CONFIG ---
+    let player;
+    // Replace this ID with your actual YouTube video ID (e.g., dQw4w9WgXcQ)
+    const vslVideoId = '7pNuepyhI-A'; 
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('vsl-player', {
+        height: '100%',
+        width: '100%',
+        videoId: vslVideoId,
+        playerVars: {
+          'autoplay': 1,
+          'mute': 1,
+          'controls': 0,
+          'rel': 0,
+          'modestbranding': 1,
+          'loop': 1,
+          'playlist': vslVideoId,
+          'playsinline': 1,
+          'disablekb': 1
+        },
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+      
+      const overlay = document.getElementById('unmute-overlay');
+      const container = document.getElementById('vsl-container');
+      
+      overlay.addEventListener('click', function() {
+        player.unMute();
+        player.setVolume(100);
+        player.seekTo(0); 
+        overlay.style.display = 'none';
+        container.style.pointerEvents = 'auto'; // Allow interaction if needed
+      });
+    }
+
+
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         const target = document.querySelector(this.getAttribute("href"));
@@ -500,12 +450,6 @@
     window.addEventListener("klaviyoForms", function(e) { 
             if (e.detail.type == 'submit') { 
                 fbq('track', 'Lead') 
-                // Show the Calendly container
-                const calendlyContainer = document.getElementById("calendly-container");
-                if (calendlyContainer) {
-                    calendlyContainer.classList.remove("hidden");
-                    calendlyContainer.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
             } 
     }); 
 
