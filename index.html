@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfroBusinessClub - Montréal</title>
+    <meta name="description" content="L'écosystème de référence pour les professionnels et entrepreneurs afro-descendants à Montréal. Cocktail mixers, dîners privés et mastermind.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AfroBusinessClub - Montréal">
+    <meta property="og:description" content="L'écosystème de référence pour les professionnels et entrepreneurs afro-descendants à Montréal. Cocktail mixers, dîners privés et mastermind.">
+    <meta property="og:image" content="assets/ABC logo.png">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/ABC logo.png">
@@ -53,12 +60,12 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window,document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1976441129059772'); 
+        fbq('init', '4519526634932071'); 
         fbq('track', 'PageView');
     </script>
     <noscript>
     <img height="1" width="1" 
-    src="https://www.facebook.com/tr?id=1976441129059772&ev=PageView
+    src="https://www.facebook.com/tr?id=4519526634932071&ev=PageView
     &noscript=1"/>
     </noscript>
         <!-- End Facebook Pixel Code -->
@@ -78,19 +85,65 @@
 <body class="font-body text-gray-800 bg-brand-light antialiased">
 
     <!-- Navigation -->
-    <nav class="absolute top-0 w-full z-20 py-6">
-        <div class="container mx-auto px-6 relative text-center">
-            <a href="#" class="text-2xl font-heading font-bold text-white tracking-wide uppercase">
+    <nav id="navbar" class="fixed top-0 w-full z-40 py-4 transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-xl md:text-2xl font-heading font-bold text-white tracking-wide uppercase">
                 Afro <span class="text-brand-gold">Business</span> Club
             </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="mastermind.html" class="text-xs font-semibold text-white/80 hover:text-brand-gold transition uppercase tracking-wider" data-i18n="nav_mastermind">Le Mastermind</a>
+            </div>
+
+            <!-- Right Controls (Desktop) -->
+            <div class="hidden md:flex items-center gap-4">
+                <button
+                    id="langToggle"
+                    type="button"
+                    class="text-white/90 hover:text-white text-xs font-semibold border border-white/25 hover:border-white/50 bg-white/5 hover:bg-white/10 px-3 py-2 rounded-md transition"
+                    aria-label="Changer la langue"
+                >
+                    EN
+                </button>
+                <a href="#join" class="bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-xs px-4 py-2.5 rounded-md transition transform hover:-translate-y-0.5 uppercase tracking-wider" data-i18n="cta_button">
+                    Rejoignez la communauté
+                </a>
+            </div>
+
+            <!-- Hamburger Button (Mobile) -->
             <button
-                id="langToggle"
+                id="menuToggle"
                 type="button"
-                class="absolute right-6 top-1/2 -translate-y-1/2 text-white/90 hover:text-white text-xs md:text-sm font-semibold border border-white/25 hover:border-white/50 bg-white/5 hover:bg-white/10 px-3 py-2 rounded-md transition"
-                aria-label="Changer la langue"
+                class="md:hidden text-white/90 hover:text-white focus:outline-none p-2"
+                aria-label="Menu"
             >
-                EN
+                <i class="fa-solid fa-bars text-xl"></i>
             </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-lg border-b border-white/10 py-6 px-6 transition-all duration-300 z-50">
+            <div class="flex flex-col gap-5">
+                <a href="mastermind.html" class="mobile-nav-link text-sm font-semibold text-white/80 hover:text-brand-gold transition uppercase tracking-wider" data-i18n="nav_mastermind">Le Mastermind</a>
+                
+                <hr class="border-white/10">
+                
+                <div class="flex items-center justify-between mt-2">
+                    <button
+                        id="langToggleMobile"
+                        type="button"
+                        class="text-white/90 hover:text-white text-xs font-semibold border border-white/25 hover:border-white/50 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-md transition"
+                        aria-label="Changer la langue"
+                    >
+                        EN
+                    </button>
+                    <a href="#join" class="mobile-nav-link bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-xs px-4 py-2.5 rounded-md transition uppercase tracking-wider text-center" data-i18n="cta_button">
+                        Rejoignez la communauté
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -108,19 +161,15 @@
         <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl">
             <!-- Text Content -->
             <h1 class="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white">
-                <span class="text-2xl md:text-3xl font-medium block mt-6 text-gray-200" data-i18n="hero_tagline">Apprendre. Connecter. Grandir.</span>
+                <span class="text-2xl md:text-3xl font-medium block mt-6 text-gray-200" data-i18n="hero_tagline">L'Écosystème des Entrepreneurs et Professionnels Afro-Descendants.</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto" data-i18n="hero_subtitle">
-                Des mixers à haute énergie aux tables stratégiques privées. Rejoignez l’écosystème conçu pour développer votre réseau et faire grandir votre entreprise.
+                Des Cocktail Mixers à haute énergie pour élargir votre réseau aux tables Mastermind privées pour propulser votre entreprise. Rejoignez l'écosystème de référence à Montréal.
             </p>
-            <div class="flex flex-col gap-4 justify-center items-center">
-
+            <div class="flex justify-center items-center">
                 <a href="#join" class="inline-block bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-lg px-10 py-2 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
                     <span data-i18n="cta_button">Rejoignez la communauté</span>
                 </a>
-                <a href="mastermind.html" class="inline-block bg-brand-light hover:bg-yellow-600 text-brand-dark font-bold text-sm px-3 py-2 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
-                    <span data-i18n="cta_button_2">Le Mastermind</span>
-                </a>        
             </div>
         </div>
     </header>
@@ -129,12 +178,12 @@
     <section id="join" class="py-20 bg-white border-b border-gray-200">
         <div class="container mx-auto px-6 max-w-3xl">
             
-            <h1 class="font-heading text-4xl md:text-5xl lg:text-7xl font-bold mb-8 text-center">
-                <span class="text-2xl md:text-3xl font-medium block mt-6" data-i18n="intro_heading">Pour les entrepreneur·e·s afro-descendant·e·s ambitieux·ses de Montréal.</span>
-            </h1>
+            <h2 class="font-heading text-4xl md:text-5xl lg:text-7xl font-bold mb-8 text-center">
+                <span class="text-2xl md:text-3xl font-medium block mt-6" data-i18n="intro_heading">Connecter les talents. Accélérer la croissance.</span>
+            </h2>
             <!-- The Intro Text -->
             <p class="text-center text-gray-800 mb-12 leading-relaxed" data-i18n="intro_body">
-                Afro Business Club est une communauté de professionnel·le·s et d’entrepreneur·e·s brillants et inspirants qui aiment créer des liens. Si vous souhaitez développer des relations et approfondir vos connaissances en stratégie, croissance, passage à l’échelle et bien plus, rejoignez la communauté pour être informé·e de nos prochains événements.
+                L'Afro Business Club est le point de rencontre incontournable des professionnels, créateurs et entrepreneurs afro-descendants de Montréal. Nous croyons que la croissance collective repose sur deux piliers : un réseau ouvert et dynamique pour créer des opportunités, et des espaces de travail stratégiques réservés aux fondateurs établis pour optimiser et passer à l'échelle.
             </p>
 
             <!-- The Form (Moved Here) -->
@@ -154,25 +203,25 @@
                     <img src="assets/AfroConnect (65 of 141).jpg" alt="Community members" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
                     <h3 class="font-heading text-4xl font-bold text-brand-gold mb-4" data-i18n="stats_members_title">500+ membres</h3>
                     <p class="text-gray-400 leading-relaxed" data-i18n="stats_members_body">
-                        Afro Business Club a été créé récemment et notre communauté compte déjà plus de 500 membres. Autant dire que ça grandit vite.
+                        Un réseau grandissant de professionnels qualifiés, de cadres et d'entrepreneurs engagés à partager leurs opportunités et s'entraider.
                     </p>
                 </div>
 
                 <!-- Column 2 -->
                 <div>
                     <img src="assets/40-IMG_4370.jpg" alt="Exciting events" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
-                    <h3 class="font-heading text-2xl font-bold text-white mb-4" data-i18n="events_title">Événements dynamiques</h3>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-4" data-i18n="events_title">Événements Haute Visibilité</h3>
                     <p class="text-gray-400 leading-relaxed" data-i18n="events_body">
-                        Prêt·e à nous rejoindre? Nous organisons des événements autour de l’entrepreneuriat: mixers, shows en direct, panels, et plus encore.
+                        Des Cocktail Mixers à forte affluence aux panels thématiques inspirants. Des opportunités concrètes d'acquisition, d'apprentissage et de visibilité.
                     </p>
                 </div>
 
                 <!-- Column 3 -->
                 <div>
                     <img src="assets/AfroConnect (108 of 141).jpg" alt="Building connections" class="w-full h-48 object-cover rounded-lg mb-6 shadow-lg">
-                    <h3 class="font-heading text-2xl font-bold text-white mb-4" data-i18n="connections_title">Créez des liens</h3>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-4" data-i18n="connections_title">Le Mastermind</h3>
                     <p class="text-gray-400 leading-relaxed" data-i18n="connections_body">
-                        En tant que membre, rencontrez une grande diversité de personnes et créez de vraies relations. Votre réseau, c’est votre capital.
+                        Une table de travail exclusive conçue uniquement pour les propriétaires d'entreprises générant entre 5 000 $ et 50 000 $ par mois.
                     </p>
                 </div>
 
@@ -180,25 +229,8 @@
         </div>
     </section>
 
-    <section id="join-2" class="pb-10 bg-brand-dark text-white">
-        <div class="container mx-auto px-6 max-w-3xl">
-            
-            <!-- The Form (Moved Here) -->
-            <div class="bg-gray-50 p-8 md:p-10 rounded-xl border border-gray-200 shadow-lg relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold"></div>
-                
-                <div class="text-center mb-8">
-                    <h3 class="font-heading text-2xl font-bold text-brand-dark" data-i18n="form_title">Rejoignez le réseau</h3>
-                    <p class="text-sm text-gray-500 mt-2" data-i18n="form_subtitle">Rejoignez 500+ fondateur·rice·s et professionnel·le·s locaux. Pas de spam, juste des opportunités.</p>
-                </div>
-                
-                <div class="klaviyo-form-TUywsZ"></div>
-            </div>
-        </div>
-    </section>
-
     <!-- SECTION 3: THE 3 PILLARS (The Ecosystem) -->
-    <section class="py-20 bg-brand-light">
+    <section id="ecosystem" class="py-20 bg-brand-light">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark" data-i18n="pillars_heading">Un espace pour chaque étape de votre croissance.</h2>
@@ -206,49 +238,49 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Column 1: The Spark -->
+                <!-- Column 1: Social & Inspiration -->
                 <div class="pillar-card p-8 rounded-xl border border-gray-800 shadow-xl relative overflow-hidden" style="background-image: url('assets/AfroConnect (108 of 141).jpg'); background-size: cover; background-position: center;">
                     <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-sm"></div>
                     <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold z-10"></div>
                     <div class="relative z-10">
                         <div class="mb-6">
-                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide" data-i18n="pillar1_badge">Social</span>
+                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide" data-i18n="pillar1_badge">Social & Inspiration</span>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold mb-6 text-white">Afro Connect Mixers</h3>
+                        <h3 class="font-heading text-2xl font-bold mb-6 text-white" data-i18n="pillar1_title">Cocktail Mixers & Panels</h3>
                         
                         <div class="space-y-4 text-sm">
-                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar1_vibe">Haute énergie & accès ouvert.</span></p>
-                            <p><span class="font-bold text-gray-200" data-i18n="label_for">Pour:</span> <span class="text-gray-400" data-i18n="pillar1_for">Professionnel·le·s, créatif·ve·s et entrepreneur·e·s.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar1_vibe">Haute énergie, inspiration & réseau.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_for">Pour:</span> <span class="text-gray-400" data-i18n="pillar1_for">Professionnels, cadres et entrepreneurs.</span></p>
                             <div class="pt-4 border-t border-gray-700">
                                 <span class="font-bold text-gray-200 block mb-1" data-i18n="label_promise">La promesse:</span>
-                                <p class="text-gray-400 italic" data-i18n="pillar1_promise">Rencontrez votre prochain·e cofondateur·rice, client·e, recrue ou ami·e autour d’un verre, dans un lieu soigneusement sélectionné.</p>
+                                <p class="text-gray-400 italic" data-i18n="pillar1_promise">Élargissez votre cercle d'influence et rencontrez des partenaires stratégiques lors de nos cocktail mixers à forte affluence et panels d'experts.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Column 2: The Skill -->
+                <!-- Column 2: Masterclass -->
                 <div class="pillar-card p-8 rounded-xl border border-gray-800 shadow-xl relative overflow-hidden" style="background-image: url('assets/29-IMG_4344.jpg'); background-size: cover; background-position: center;">
                     <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-sm"></div>
                     <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold z-10"></div>
                     <div class="relative z-10">
                         <div class="mb-6">
-                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide" data-i18n="pillar2_badge">Compétences</span>
+                            <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide" data-i18n="pillar2_badge">Masterclass</span>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold mb-6 text-white" data-i18n="pillar2_title">Ateliers de croissance</h3>
+                        <h3 class="font-heading text-2xl font-bold mb-6 text-white" data-i18n="pillar2_title">Dîners Privés & Analyses</h3>
                         
                         <div class="space-y-4 text-sm">
-                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe_2">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar2_vibe">Carnets ouverts & actionnable.</span></p>
-                            <p><span class="font-bold text-gray-200" data-i18n="label_for_2">Pour:</span> <span class="text-gray-400" data-i18n="pillar2_for">Opérateur·rice·s prêt·e·s à optimiser.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe_2">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar2_vibe">Sélectif, intime & analytique.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_for_2">Pour:</span> <span class="text-gray-400" data-i18n="pillar2_for">Propriétaires d'entreprises (15 à 20 participants).</span></p>
                             <div class="pt-4 border-t border-gray-700">
                                 <span class="font-bold text-gray-200 block mb-1" data-i18n="label_promise_2">La promesse:</span>
-                                <p class="text-gray-400 italic" data-i18n="pillar2_promise">Approfondissements sur l’investissement, les tunnels de vente, les structures juridiques, les opérations, et plus. Repartez avec des compétences et des ressources concrètes.</p>
+                                <p class="text-gray-400 italic" data-i18n="pillar2_promise">Un dîner-réseau exclusif suivi d'un atelier d'analyse approfondie de 1 à 2 heures, disséquant en direct les modèles d'affaires de participants pour résoudre leurs goulots d'étranglement.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Column 3: The Strategy -->
+                <!-- Column 3: Stratégie -->
                 <div class="pillar-card p-8 rounded-xl border border-gray-800 shadow-xl relative overflow-hidden" style="background-image: url('assets/40-IMG_4370.jpg'); background-size: cover; background-position: center;">
                     <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-sm"></div>
                     <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold z-10"></div>
@@ -256,14 +288,14 @@
                         <div class="mb-6">
                             <span class="bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide" data-i18n="pillar3_badge">Stratégie</span>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold mb-6 text-white" data-i18n="pillar3_title">Le Business Club</h3>
+                        <h3 class="font-heading text-2xl font-bold mb-6 text-white" data-i18n="pillar3_title">Le Mastermind (La Table)</h3>
                         
                         <div class="space-y-4 text-sm">
-                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe_3">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar3_vibe">À huis clos & confidentiel.</span></p>
-                            <p><span class="font-bold text-gray-200" data-i18n="label_for_3">Pour:</span> <span class="text-gray-400" data-i18n="pillar3_for">Fondateur·rice·s sélectionné·e·s qui génèrent des revenus.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_vibe_3">L’ambiance:</span> <span class="text-gray-400" data-i18n="pillar3_vibe">Confidentiel, boardroom & axé sur l'exécution.</span></p>
+                            <p><span class="font-bold text-gray-200" data-i18n="label_for_3">Pour:</span> <span class="text-gray-400" data-i18n="pillar3_for">Entrepreneurs établis (5k$ à 50k$ de revenus mensuels).</span></p>
                             <div class="pt-4 border-t border-gray-700">
                                 <span class="font-bold text-gray-200 block mb-1" data-i18n="label_promise_3">La promesse:</span>
-                                <p class="text-gray-400 italic" data-i18n="pillar3_promise">Une session privée type boardroom suivie d’un dîner soigneusement choisi. Nous décortiquons les modèles d’affaires et résolvons les blocages en temps réel avec notre format signature « Hot Seat ».</p>
+                                <p class="text-gray-400 italic" data-i18n="pillar3_promise">Votre conseil d'administration privé (10 à 15 pairs). Partagez vos KPIs, auditez vos systèmes et résolvez vos blocages opérationnels avec notre format signature "Hot Seat".</p>
                             </div>
                         </div>
                     </div>
@@ -307,42 +339,52 @@
         const I18N = {
             fr: {
                 page_title: "AfroBusinessClub - Montréal",
-                hero_tagline: "Apprendre. Connecter. Grandir.",
-                hero_subtitle: "Des mixers à haute énergie aux tables stratégiques privées. Rejoignez l’écosystème conçu pour développer votre réseau et faire grandir votre entreprise.",
-                intro_heading: "Pour les entrepreneur·e·s afro-descendant·e·s ambitieux·ses de Montréal.",
-                intro_body: "Afro Business Club est une communauté de professionnel·le·s et d’entrepreneur·e·s brillants et inspirants qui aiment créer des liens. Si vous souhaitez développer des relations et approfondir vos connaissances en stratégie, croissance, passage à l’échelle et bien plus, rejoignez la communauté pour être informé·e de nos prochains événements.",
+                page_description: "L'écosystème de référence pour les professionnels et entrepreneurs afro-descendants à Montréal. Cocktail mixers, dîners privés et mastermind.",
+                nav_events: "Événements",
+                nav_dinners: "Dîners Privés",
+                nav_mastermind: "Le Mastermind",
+                nav_join: "Rejoindre",
+                hero_tagline: "L'Écosystème des Entrepreneurs et Professionnels Afro-Descendants.",
+                hero_subtitle: "Des Cocktail Mixers à haute énergie pour élargir votre réseau aux tables Mastermind privées pour propulser votre entreprise. Rejoignez l'écosystème de référence à Montréal.",
+                intro_heading: "Connecter les talents. Accélérer la croissance.",
+                intro_body: "L'Afro Business Club est le point de rencontre incontournable des professionnels, créateurs et entrepreneurs afro-descendants de Montréal. Nous croyons que la croissance collective repose sur deux piliers : un réseau ouvert et dynamique pour créer des opportunités, et des espaces de travail stratégiques réservés aux fondateurs établis pour optimiser et passer à l’échelle.",
                 stats_members_title: "500+ membres",
-                stats_members_body: "Afro Business Club a été créé récemment et notre communauté compte déjà plus de 500 membres. Autant dire que ça grandit vite.",
-                events_title: "Événements dynamiques",
-                events_body: "Prêt·e à nous rejoindre? Nous organisons des événements autour de l’entrepreneuriat: mixers, shows en direct, panels, et plus encore.",
-                connections_title: "Créez des liens",
-                connections_body: "En tant que membre, rencontrez une grande diversité de personnes et créez de vraies relations. Votre réseau, c’est votre capital.",
-                form_title: "Rejoignez le réseau",
-                form_subtitle: "Rejoignez 500+ fondateur·rice·s et professionnel·le·s locaux. Pas de spam, juste des opportunités.",
+                stats_members_body: "Un réseau grandissant de professionnels qualifiés, de cadres et d'entrepreneurs engagés à partager leurs opportunités et s'entraider.",
+                events_title: "Événements Haute Visibilité",
+                events_body: "Des Cocktail Mixers à forte affluence aux panels thématiques inspirants. Des opportunités concrètes d'acquisition, d'apprentissage et de visibilité.",
+                connections_title: "Le Mastermind",
+                connections_body: "Une table de travail exclusive conçue uniquement pour les propriétaires d'entreprises générant entre 5 000 $ et 50 000 $ par mois.",
+                form_title: "Rejoignez l'Écosystème",
+                form_subtitle: "Intégrez un réseau de plus de 500 professionnels et fondateurs à Montréal. Recevez vos invitations pour nos prochains Mixers et Ateliers.",
                 pillars_heading: "Un espace pour chaque étape de votre croissance.",
-                pillar1_badge: "Social",
+                
+                pillar1_badge: "Social & Inspiration",
+                pillar1_title: "Cocktail Mixers & Panels",
                 label_vibe: "L’ambiance:",
-                pillar1_vibe: "Haute énergie & accès ouvert.",
+                pillar1_vibe: "Haute énergie, inspiration & réseau.",
                 label_for: "Pour:",
-                pillar1_for: "Professionnel·le·s, créatif·ve·s et entrepreneur·e·s.",
+                pillar1_for: "Professionnels, cadres et entrepreneurs.",
                 label_promise: "La promesse:",
-                pillar1_promise: "Rencontrez votre prochain·e cofondateur·rice, client·e, recrue ou ami·e autour d’un verre, dans un lieu soigneusement sélectionné.",
-                pillar2_badge: "Compétences",
-                pillar2_title: "Ateliers de croissance",
+                pillar1_promise: "Élargissez votre cercle d'influence et rencontrez des partenaires stratégiques lors de nos cocktail mixers à forte affluence et panels d'experts.",
+                
+                pillar2_badge: "Masterclass",
+                pillar2_title: "Dîners Privés & Analyses",
                 label_vibe_2: "L’ambiance:",
-                pillar2_vibe: "Carnets ouverts & actionnable.",
+                pillar2_vibe: "Sélectif, intime & analytique.",
                 label_for_2: "Pour:",
-                pillar2_for: "Opérateur·rice·s prêt·e·s à optimiser.",
+                pillar2_for: "Propriétaires d'entreprises (15 à 20 participants).",
                 label_promise_2: "La promesse:",
-                pillar2_promise: "Approfondissements sur l’investissement, les tunnels de vente, les structures juridiques, les opérations, et plus. Repartez avec des compétences et des ressources concrètes.",
+                pillar2_promise: "Un dîner-réseau exclusif suivi d'un atelier d'analyse approfondie de 1 à 2 heures, disséquant en direct les modèles d'affaires de participants pour résoudre leurs goulots d'étranglement.",
+                
                 pillar3_badge: "Stratégie",
-                pillar3_title: "Le Business Club",
+                pillar3_title: "Le Mastermind (La Table)",
                 label_vibe_3: "L’ambiance:",
-                pillar3_vibe: "À huis clos & confidentiel.",
+                pillar3_vibe: "Confidentiel, boardroom & axé sur l'exécution.",
                 label_for_3: "Pour:",
-                pillar3_for: "Fondateur·rice·s sélectionné·e·s qui génèrent des revenus.",
+                pillar3_for: "Entrepreneurs établis (5k$ à 50k$ de revenus mensuels).",
                 label_promise_3: "La promesse:",
-                pillar3_promise: "Une session privée type boardroom suivie d’un dîner soigneusement choisi. Nous décortiquons les modèles d’affaires et résolvons les blocages en temps réel avec notre format signature « Hot Seat ».",
+                pillar3_promise: "Votre conseil d'administration privé (10 à 15 pairs). Partagez vos KPIs, auditez vos systèmes et résolvez vos blocages opérationnels avec notre format signature \"Hot Seat\".",
+                
                 cta_heading: "Votre réseau, c’est votre capital.",
                 cta_body: "Vous êtes à une conversation de votre prochain·e partenaire, client·e ou déclic. Ne manquez pas la prochaine invitation.",
                 cta_button: "Rejoignez la communauté",
@@ -351,42 +393,52 @@
             },
             en: {
                 page_title: "AfroBusinessClub - Montreal",
-                hero_tagline: "Learn. Connect. Grow.",
-                hero_subtitle: "From high-energy mixers to private strategy boardrooms. Join the ecosystem designed to help you grow your network and build your business.",
-                intro_heading: "For Montreal's Ambitious Afro-Descendant Entrepreneurs.",
-                intro_body: "Afro Business Club is a community of intelligent, inspiring professionals and entrepreneurs who love to connect. If you are looking to build relationships and expand your knowledge within business strategy, scaling, and much more then join to the community to get notified of when our next events are happening.",
+                page_description: "The premier ecosystem for Afro-descendant professionals and entrepreneurs in Montreal. High-energy mixers, private dinners, and mastermind boardrooms.",
+                nav_events: "Events",
+                nav_dinners: "Private Dinners",
+                nav_mastermind: "The Mastermind",
+                nav_join: "Join",
+                hero_tagline: "The Premier Ecosystem for Afro-Descendant Entrepreneurs & Professionals.",
+                hero_subtitle: "From high-energy Cocktail Mixers to expand your network to private Mastermind boardrooms to scale your business. Join Montreal's reference ecosystem.",
+                intro_heading: "Connecting Talent. Accelerating Growth.",
+                intro_body: "Afro Business Club is the premier hub for Montreal's Afro-descendant professionals, creators, and entrepreneurs. We believe collective growth rests on two pillars: a vibrant, open network to generate new opportunities, and strategic boardroom spaces reserved for established founders to optimize and scale.",
                 stats_members_title: "500+ Members",
-                stats_members_body: "Afro Business Club was created recently and our community already spans more than 500 members. Needless to say, it's growing fast!",
-                events_title: "Exciting Events",
-                events_body: "Are you ready to join in on the fun? We host entrepreneur-related events including mixers, live shows, panels, and more.",
-                connections_title: "Build Connections",
-                connections_body: "As a member, discover a wide range of people in our diverse community to meet and build relationships with. Your network is your net worth!",
-                form_title: "Join the Network",
-                form_subtitle: "Join 500+ local founders & professionals. No spam, just opportunity.",
+                stats_members_body: "A growing network of qualified professionals, executives, and builders committed to sharing opportunities and climbing together.",
+                events_title: "High-Visibility Events",
+                events_body: "From high-attendance Cocktail Mixers to insightful panel discussions. Real opportunities for visibility, networking, and client acquisition.",
+                connections_title: "The Mastermind",
+                connections_body: "An exclusive, closed-door boardroom designed solely for business owners generating between $5,000 and $50,000 per month.",
+                form_title: "Join the Ecosystem",
+                form_subtitle: "Join a network of 500+ Montreal professionals and founders. Get invitations to our upcoming Mixers and Growth Workshops.",
                 pillars_heading: "A Room For Every Stage of Growth.",
-                pillar1_badge: "Social",
+                
+                pillar1_badge: "Social & Inspiration",
+                pillar1_title: "Cocktail Mixers & Panels",
                 label_vibe: "The Vibe:",
-                pillar1_vibe: "High Energy & Open Access.",
+                pillar1_vibe: "High energy, inspiration & networking.",
                 label_for: "For:",
-                pillar1_for: "Professionals, Creatives, and Entrepreneurs.",
+                pillar1_for: "Professionals, executives, and entrepreneurs.",
                 label_promise: "The Promise:",
-                pillar1_promise: "Meet your next co-founder, client, hire or friend over a drink in a curated, high-vibration venue.",
-                pillar2_badge: "Skills",
-                pillar2_title: "Growth Workshops",
+                pillar1_promise: "Expand your circle of influence and meet strategic partners during our high-attendance cocktail mixers and expert panel discussions.",
+                
+                pillar2_badge: "Masterclass",
+                pillar2_title: "Private Dinners & Audits",
                 label_vibe_2: "The Vibe:",
-                pillar2_vibe: "Notebooks Open & Tactical.",
+                pillar2_vibe: "Vetted, intimate & analytical.",
                 label_for_2: "For:",
-                pillar2_for: "Operators ready to optimize.",
+                pillar2_for: "Business owners only (15 to 20 participants).",
                 label_promise_2: "The Promise:",
-                pillar2_promise: "Deep dives into, Investing, Sales Funnels, Legal Structures, Operations, and more. Walk away with new skills and assets.",
+                pillar2_promise: "An exclusive networking dinner followed by a 1-2 hour deep business analysis and masterclass, dissecting attendee business models in real-time.",
+                
                 pillar3_badge: "Strategy",
-                pillar3_title: "The Business Club",
+                pillar3_title: "The Mastermind Boardroom",
                 label_vibe_3: "The Vibe:",
-                pillar3_vibe: "Closed Door & Confidential.",
+                pillar3_vibe: "Closed-door, boardroom & execution-driven.",
                 label_for_3: "For:",
-                pillar3_for: "Vetted Founders generating revenue.",
+                pillar3_for: "Established founders ($5k to $50k in monthly revenue).",
                 label_promise_3: "The Promise:",
-                pillar3_promise: "A private boardroom session followed by a curated dinner. We dissect business models and solve bottlenecks in real-time using our signature 'Hot Seat' format.",
+                pillar3_promise: "A private, closed-door board of directors. Dissect business models, audit metrics, and crush operational bottlenecks in real-time via our signature \"Hot Seat\" format.",
+                
                 cta_heading: "Your Network is Your Net Worth.",
                 cta_body: "You are one conversation away from your next partner, client, or breakthrough. Don't miss the next invitation.",
                 cta_button: "Join the Community",
@@ -400,17 +452,25 @@
             document.documentElement.lang = lang;
             document.title = dict.page_title;
 
+            // Update SEO meta tags dynamically
+            document.querySelector('meta[name="description"]')?.setAttribute("content", dict.page_description);
+            document.querySelector('meta[property="og:description"]')?.setAttribute("content", dict.page_description);
+            document.querySelector('meta[property="og:title"]')?.setAttribute("content", dict.page_title);
+
             document.querySelectorAll("[data-i18n]").forEach((el) => {
                 const key = el.getAttribute("data-i18n");
                 if (!key || dict[key] == null) return;
                 el.textContent = dict[key];
             });
 
-            const toggle = document.getElementById("langToggle");
-            if (toggle) {
-                toggle.textContent = lang === "fr" ? "EN" : "FR";
-                toggle.setAttribute("aria-label", lang === "fr" ? "Switch to English" : "Passer en français");
-            }
+            // Update language toggles
+            const toggles = [document.getElementById("langToggle"), document.getElementById("langToggleMobile")];
+            toggles.forEach(toggle => {
+                if (toggle) {
+                    toggle.textContent = lang === "fr" ? "EN" : "FR";
+                    toggle.setAttribute("aria-label", lang === "fr" ? "Switch to English" : "Passer en français");
+                }
+            });
 
             try {
                 localStorage.setItem("abc_lang", lang);
@@ -441,13 +501,61 @@
         });
 
         setLanguage(getInitialLanguage());
-        const langToggle = document.getElementById("langToggle");
-        if (langToggle) {
-            langToggle.addEventListener("click", () => {
-                const current = document.documentElement.lang === "en" ? "en" : "fr";
-                setLanguage(current === "fr" ? "en" : "fr");
+        
+        // Event listener for language toggles
+        const toggles = [document.getElementById("langToggle"), document.getElementById("langToggleMobile")];
+        toggles.forEach(toggle => {
+            if (toggle) {
+                toggle.addEventListener("click", () => {
+                    const current = document.documentElement.lang === "en" ? "en" : "fr";
+                    setLanguage(current === "fr" ? "en" : "fr");
+                });
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = menuToggle?.querySelector("i");
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+                const isOpen = !mobileMenu.classList.contains("hidden");
+                if (menuIcon) {
+                    if (isOpen) {
+                        menuIcon.classList.remove("fa-bars");
+                        menuIcon.classList.add("fa-xmark");
+                    } else {
+                        menuIcon.classList.remove("fa-xmark");
+                        menuIcon.classList.add("fa-bars");
+                    }
+                }
             });
         }
+
+        // Close mobile menu on clicking any link with mobile-nav-link class
+        document.querySelectorAll(".mobile-nav-link").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu?.classList.add("hidden");
+                if (menuIcon) {
+                    menuIcon.classList.remove("fa-xmark");
+                    menuIcon.classList.add("fa-bars");
+                }
+            });
+        });
+
+        // Navbar Scroll Reactive Effect
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar?.classList.remove("bg-transparent", "py-4");
+                navbar?.classList.add("bg-brand-dark/90", "backdrop-blur-md", "border-b", "border-white/10", "shadow-lg", "py-3");
+            } else {
+                navbar?.classList.remove("bg-brand-dark/90", "backdrop-blur-md", "border-b", "border-white/10", "shadow-lg", "py-3");
+                navbar?.classList.add("bg-transparent", "py-4");
+            }
+        });
     </script>
 </body>
 </html>
