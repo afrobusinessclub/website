@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dîners & Masterclasses - Afro Business Club</title>
+  <meta name="description" content="Des dîners privés sélectifs suivis de masterclasses intensives à Montréal. Résolvez vos goulots d'étranglement et développez votre réseau de pairs.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/ABC logo.png">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C5A059',
+              dark: '#050505',
+              charcoal: '#121212',
+              cardBg: '#1C1C1E',
+              light: '#F5F5F5',
+              accent: '#E5E5E5'
+            }
+          },
+          fontFamily: {
+            heading: ['"Playfair Display"', 'serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(5, 5, 5, 0.75) 0%, rgba(5, 5, 5, 0.95) 100%);
+    }
+    .glass-card {
+      background: rgba(28, 28, 30, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(197, 160, 89, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(197, 160, 89, 0.1);
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #DFBA73 0%, #C5A059 50%, #A37E3A 100%);
+    }
+  </style>
+</head>
+<body class="font-body text-gray-300 bg-brand-dark antialiased">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 w-full z-40 py-4 transition-all duration-300 bg-transparent">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+      <a href="index.html" class="text-xl md:text-2xl font-heading font-bold text-white tracking-wide uppercase">
+        Afro <span class="text-brand-gold">Business</span> Club
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-xs font-semibold text-white/80 hover:text-brand-gold transition uppercase tracking-wider">Accueil</a>
+        <a href="mastermind.html" class="text-xs font-semibold text-white/80 hover:text-brand-gold transition uppercase tracking-wider">Le Mastermind</a>
+        <a href="dinners.html" class="text-xs font-semibold text-brand-gold transition uppercase tracking-wider">Dîners Privés</a>
+      </div>
+
+      <!-- Right Controls (Desktop) -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#reserve" class="bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-xs px-4 py-2.5 rounded-md transition transform hover:-translate-y-0.5 uppercase tracking-wider">
+          Réserver ma place
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menuToggle" type="button" class="md:hidden text-white/90 hover:text-white focus:outline-none p-2" aria-label="Menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-lg border-b border-white/10 py-6 px-6 transition-all duration-300 z-50">
+      <div class="flex flex-col gap-5">
+        <a href="index.html" class="mobile-nav-link text-sm font-semibold text-white/80 hover:text-brand-gold transition uppercase tracking-wider">Accueil</a>
+        <a href="mastermind.html" class="mobile-nav-link text-sm font-semibold text-white/80 hover:text-brand-gold transition uppercase tracking-wider">Le Mastermind</a>
+        <a href="dinners.html" class="mobile-nav-link text-sm font-semibold text-brand-gold transition uppercase tracking-wider">Dîners Privés</a>
+        
+        <hr class="border-white/10">
+        
+        <div class="flex items-center mt-2">
+          <a href="#reserve" class="mobile-nav-link w-full bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-xs px-4 py-2.5 rounded-md transition uppercase tracking-wider text-center">
+            Réserver ma place
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="relative min-h-[95vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="assets/29-IMG_4344.jpg" alt="Afro Business Club Private Dinner" class="w-full h-full object-cover">
+      <div class="hero-overlay absolute inset-0"></div>
+    </div>
+
+    <!-- Subtle Glow Effects -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl"></div>
+
+    <div class="container mx-auto px-6 relative z-10 max-w-4xl text-center">
+      <p class="text-brand-gold font-semibold uppercase tracking-[0.22em] text-xs md:text-sm mb-5">
+        Expérience sélective | Montréal | Connexions de haut niveau
+      </p>
+      
+      <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 text-white">
+        Dîners Privés <br class="hidden md:inline">&amp; Masterclasses
+      </h1>
+      
+      <p class="text-brand-gold font-semibold uppercase tracking-[0.18em] text-xs md:text-sm mb-6">
+        Réservé exclusivement aux entrepreneurs générant plus de 10 000 $ par mois
+      </p>
+
+      <div class="w-24 h-[1px] bg-brand-gold mx-auto mb-8"></div>
+
+      <!-- VSL Video Stage -->
+      <div class="max-w-3xl mx-auto mb-10">
+        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video">
+          <iframe 
+            src="https://www.youtube.com/embed/7pNuepyhI-A?rel=0&modestbranding=1&autoplay=0" 
+            title="Afro Business Club VSL"
+            class="w-full h-full absolute inset-0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="text-[11px] text-gray-500 mt-3 italic">
+          Regardez cette courte vidéo de présentation (VSL) pour comprendre le concept avant d'appliquer.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#reserve" class="inline-flex bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-base md:text-lg px-10 py-4 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
+          Demander une invitation
+        </a>
+        <a href="#concept" class="inline-flex items-center justify-center border border-white/25 hover:border-white/45 text-white/90 hover:text-white font-semibold text-base md:text-lg px-10 py-4 rounded-md transition bg-white/5 hover:bg-white/10">
+          Découvrir le concept
+          <i class="fa-solid fa-arrow-down ml-3 text-brand-gold"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONCEPT SECTION -->
+  <section id="concept" class="py-24 border-t border-white/5 bg-brand-dark relative">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl"></div>
+    <div class="container mx-auto px-6 max-w-5xl relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+          Le Concept : Réseau &amp; Intelligence Collective
+        </h2>
+        <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
+        <p class="text-gray-400 mt-6 leading-relaxed max-w-2xl mx-auto">
+          Nous croyons que les meilleures collaborations naissent autour d'une bonne table. Les Dîners &amp; Masterclasses allient l'intimité d'un souper gastronomique et la rigueur d'un atelier stratégique.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Pillar 1 -->
+        <div class="glass-card glass-card-hover rounded-2xl p-8 flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold text-xl shrink-0">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3">1. Le Dîner Gastronomique</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Une table sélective de 15 à 20 participants dans un espace speakeasy ou privé haut de gamme à Montréal. L'occasion idéale de briser la glace, de partager vos KPIs et de créer des alliances solides dans un cadre exclusif.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="glass-card glass-card-hover rounded-2xl p-8 flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold text-xl shrink-0">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </div>
+          <div>
+            <h3 class="font-heading text-xl font-bold text-white mb-3">2. L'Atelier Masterclass &amp; Audits</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Après le repas, nous passons à la masterclass de 1 à 2 heures. Nous analysons un sujet précis (acquisition, structuration de holding, optimisation fiscale, scripts de vente) et réalisons des audits en direct de modèles d'affaires des participants (Hot Seat).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS / IMAGE CAROUSEL -->
+  <section class="py-20 bg-brand-charcoal/20 border-y border-white/5">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="grid md:grid-cols-5 gap-12 items-center">
+        <div class="md:col-span-2">
+          <h2 class="font-heading text-3xl font-bold text-white mb-6">
+            L'atmosphère de nos soirées
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-6 text-sm">
+            Pas de théorie académique ou de présentations corporatives ennuyeuses. Nos dîners sont vivants, animés et centrés sur des solutions exploitables immédiatement.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <i class="fa-regular fa-circle-check text-brand-gold text-lg"></i>
+              <span class="text-sm font-semibold text-white">Sélection sur candidature</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-regular fa-circle-check text-brand-gold text-lg"></i>
+              <span class="text-sm font-semibold text-white">Lieux uniques &amp; confidentiels</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-regular fa-circle-check text-brand-gold text-lg"></i>
+              <span class="text-sm font-semibold text-white">Intervenants experts du terrain</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel / Gallery -->
+        <div class="md:col-span-3 rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative">
+          <div class="relative overflow-hidden">
+            <div id="dinnerCarouselTrack" class="flex transition-transform duration-500 ease-out">
+              <div class="min-w-full">
+                <img src="assets/Mastermind/60-IMG_9463.jpg" alt="ABC Dinner 1" class="w-full h-[350px] object-cover">
+              </div>
+              <div class="min-w-full">
+                <img src="assets/Mastermind/11-IMG_9322.jpg" alt="ABC Dinner 2" class="w-full h-[350px] object-cover">
+              </div>
+              <div class="min-w-full">
+                <img src="assets/Mastermind/64-IMG_9473.jpg" alt="ABC Dinner 3" class="w-full h-[350px] object-cover">
+              </div>
+              <div class="min-w-full">
+                <img src="assets/Mastermind/2-IMG_9209.jpg" alt="ABC Dinner 4" class="w-full h-[350px] object-cover">
+              </div>
+            </div>
+          </div>
+
+          <button id="dinnerCarouselPrev" type="button" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center border border-white/15 transition">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="dinnerCarouselNext" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/55 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center border border-white/15 transition">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IS THIS FOR -->
+  <section class="py-24 bg-brand-dark">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl font-bold text-white">À qui s'adressent ces dîners ?</h2>
+        <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- For 1 -->
+        <div class="border border-white/5 bg-brand-charcoal/30 rounded-2xl p-8">
+          <h3 class="font-heading text-xl font-bold text-brand-gold mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-user-tie"></i>
+            Professionnels &amp; Cadres
+          </h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Professionnels corporatifs, courtiers immobiliers, directeurs et experts sectoriels cherchant à élargir leur champ de compétences stratégiques et à bâtir un carnet de contacts de premier ordre.
+          </p>
+        </div>
+
+        <!-- For 2 -->
+        <div class="border border-white/5 bg-brand-charcoal/30 rounded-2xl p-8">
+          <h3 class="font-heading text-xl font-bold text-brand-gold mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-store"></i>
+            Entrepreneurs (10k$/mois+)
+          </h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Fondateurs, dirigeants de PME et d'agences générant <strong>un minimum de 10 000 $ de chiffre d'affaires mensuel</strong> qui souhaitent auditer leurs opérations, optimiser leur acquisition et s'entourer de pairs de même niveau.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION / VETTING FORM -->
+  <section id="reserve" class="py-24 bg-brand-light text-brand-dark">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <div class="text-center mb-12">
+        <span class="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          Accès Sélectif (Entrepreneurs à 10k$/mois+)
+        </span>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mt-4 text-brand-dark">
+          Demandez Votre Invitation
+        </h2>
+        <p class="text-sm text-gray-600 mt-4 leading-relaxed">
+          Chaque table est configurée sur mesure pour assurer une alchimie parfaite entre les participants. Remplissez le formulaire ci-dessous pour lancer le processus.
+        </p>
+      </div>
+
+      <!-- Kevin Personal Callout Card -->
+      <div class="mb-8 bg-brand-charcoal text-white rounded-xl p-6 border border-brand-gold/25 shadow-lg flex flex-col md:flex-row items-center gap-6">
+        <div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-brand-gold bg-brand-dark flex items-center justify-center">
+          <img src="assets/ABC logo.png" alt="Kevin Leumassi" class="w-10 h-10 object-contain">
+        </div>
+        <div>
+          <h4 class="font-heading text-base font-bold text-brand-gold mb-1">
+            L'Engagement de Kevin Leumassi
+          </h4>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            « Une fois votre demande soumise, <strong>je vous appellerai personnellement par téléphone</strong> pour en savoir plus sur votre entreprise, comprendre vos défis actuels, et veiller à ce que je rassemble les meilleurs profils complémentaires autour de la table pour maximiser la valeur de vos interactions. »
+          </p>
+        </div>
+      </div>
+
+      <!-- Vetting Form Container -->
+      <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 shadow-xl">
+        <form id="dinnerApplyForm" class="space-y-6">
+          <div>
+            <label for="fullName" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Nom Complet</label>
+            <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: Jean Tremblay">
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="emailAddress" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Courriel Professionnel</label>
+              <input type="email" id="emailAddress" name="emailAddress" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: jean@monentreprise.com">
+            </div>
+            <div>
+              <label for="phoneNumber" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Numéro de Téléphone</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: 514-123-4567">
+            </div>
+          </div>
+
+          <div>
+            <label for="roleType" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Votre Rôle Principal</label>
+            <select id="roleType" name="roleType" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm bg-white">
+              <option value="" disabled selected>Sélectionnez une option</option>
+              <option value="entrepreneur">Propriétaire d'entreprise / Fondateur</option>
+              <option value="professional">Professionnel corporatif / Cadre</option>
+              <option value="realestate">Courtier / Agent Immobilier</option>
+              <option value="other">Autre professionnel indépendant</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="businessName" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Nom de l'entreprise ou employeur</label>
+            <input type="text" id="businessName" name="businessName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: Acme Inc.">
+          </div>
+
+          <div>
+            <label for="biggestChallenge" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Quel est votre plus grand goulot d'étranglement actuellement ?</label>
+            <textarea id="biggestChallenge" name="biggestChallenge" rows="3" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: Trouver de nouveaux clients qualifiés, restructurer mes taxes, gérer ma croissance..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-sm rounded-lg transition transform hover:-translate-y-0.5 uppercase tracking-wide">
+            Soumettre ma demande d'invitation
+          </button>
+        </form>
+        
+        <!-- Success message -->
+        <div id="successMessage" class="hidden text-center py-6 text-green-600 font-semibold">
+          <i class="fa-solid fa-circle-check text-2xl mb-2 block"></i>
+          Merci ! Votre demande a été transmise. Nous vous contacterons sous peu.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-gray-600 py-12 border-t border-white/5">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-xs mb-2">
+        &copy; 2026 Afro Business Club. Tous droits réservés.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Drawer Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const menuIcon = menuToggle?.querySelector("i");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        if (menuIcon) {
+          if (isOpen) {
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-xmark");
+          } else {
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+          }
+        }
+      });
+    }
+
+    // Close mobile menu on clicking any link
+    document.querySelectorAll(".mobile-nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu?.classList.add("hidden");
+        if (menuIcon) {
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        }
+      });
+    });
+
+    // Form Submission Simulation
+    const form = document.getElementById("dinnerApplyForm");
+    const successMsg = document.getElementById("successMessage");
+
+    if (form && successMsg) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        form.classList.add("hidden");
+        successMsg.classList.remove("hidden");
+        if (window.fbq) {
+          fbq('track', 'Lead');
+        }
+      });
+    }
+
+    // Navbar Scroll Reactive Effect
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar?.classList.remove("bg-transparent", "py-4");
+        navbar?.classList.add("bg-brand-dark/90", "backdrop-blur-md", "border-b", "border-white/10", "shadow-lg", "py-3");
+      } else {
+        navbar?.classList.remove("bg-brand-dark/90", "backdrop-blur-md", "border-b", "border-white/10", "shadow-lg", "py-3");
+        navbar?.classList.add("bg-transparent", "py-4");
+      }
+    });
+
+    // Dinner Gallery Carousel
+    (function () {
+      const track = document.getElementById("dinnerCarouselTrack");
+      if (!track) return;
+
+      const slides = Array.from(track.children);
+      const prev = document.getElementById("dinnerCarouselPrev");
+      const next = document.getElementById("dinnerCarouselNext");
+
+      let index = 0;
+
+      function render() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        render();
+      }
+
+      prev?.addEventListener("click", () => goTo(index - 1));
+      next?.addEventListener("click", () => goTo(index + 1));
+
+      // Auto-slide every 5 seconds
+      setInterval(() => {
+        goTo(index + 1);
+      }, 5000);
+    })();
+  </script>
+</body>
+</html>
