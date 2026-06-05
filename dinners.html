@@ -111,8 +111,8 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <header class="relative min-h-[95vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+  <!-- HERO & VSL SECTION -->
+  <header class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-12 overflow-hidden">
     <div class="absolute inset-0 z-0">
       <img src="assets/29-IMG_4344.jpg" alt="Afro Business Club Private Dinner" class="w-full h-full object-cover">
       <div class="hero-overlay absolute inset-0"></div>
@@ -127,19 +127,29 @@
         Expérience sélective | Montréal | Connexions de haut niveau
       </p>
       
-      <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 text-white">
-        Dîners Privés <br class="hidden md:inline">&amp; Masterclasses
+      <h1 class="font-heading text-4xl md:text-6xl font-bold leading-tight mb-4 text-white">
+        Dîners Privés &amp; Masterclasses
       </h1>
       
-      <p class="text-brand-gold font-semibold uppercase tracking-[0.18em] text-xs md:text-sm mb-6">
+      <p class="text-brand-gold font-medium uppercase tracking-[0.18em] text-xs md:text-sm mb-8">
         Réservé exclusivement aux entrepreneurs générant plus de 10 000 $ par mois
       </p>
 
       <div class="w-24 h-[1px] bg-brand-gold mx-auto mb-8"></div>
 
-      <!-- VSL Video Stage -->
-      <div class="max-w-3xl mx-auto mb-10">
-        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video">
+      <!-- VSL Video Stage (Primary Action) -->
+      <div class="max-w-3xl mx-auto mb-6">
+        <!-- Highly visible Video Watch Prompt -->
+        <div class="flex flex-col items-center mb-4">
+          <div class="animate-pulse inline-flex items-center gap-2 text-brand-dark bg-brand-gold font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-play"></i> Visionnage Obligatoire
+          </div>
+          <h2 class="font-heading text-lg md:text-xl text-white font-semibold">
+            ÉTAPE 1 : Regardez la vidéo explicative de 2 minutes
+          </h2>
+        </div>
+
+        <div class="relative group rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-black aspect-video">
           <iframe 
             src="https://www.youtube.com/embed/7pNuepyhI-A?rel=0&modestbranding=1&autoplay=0" 
             title="Afro Business Club VSL"
@@ -148,25 +158,157 @@
             allowfullscreen>
           </iframe>
         </div>
-        <p class="text-[11px] text-gray-500 mt-3 italic">
-          Regardez cette courte vidéo de présentation (VSL) pour comprendre le concept avant d'appliquer.
-        </p>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#reserve" class="inline-flex bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-base md:text-lg px-10 py-4 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
-          Demander une invitation
-        </a>
-        <a href="#concept" class="inline-flex items-center justify-center border border-white/25 hover:border-white/45 text-white/90 hover:text-white font-semibold text-base md:text-lg px-10 py-4 rounded-md transition bg-white/5 hover:bg-white/10">
-          Découvrir le concept
-          <i class="fa-solid fa-arrow-down ml-3 text-brand-gold"></i>
+      <div class="flex justify-center mt-6">
+        <a href="#reserve" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-base px-10 py-4 rounded-md shadow-lg transition transform hover:-translate-y-1 uppercase tracking-wide">
+          Passer à l'étape suivante (Postuler)
+          <i class="fa-solid fa-arrow-down"></i>
         </a>
       </div>
     </div>
   </header>
 
+  <!-- SECTION 2: 3-STEP PROCESS & APPLICATION FORM -->
+  <section id="reserve" class="py-24 border-t border-white/5 bg-brand-dark relative">
+    <div class="container mx-auto px-6 max-w-4xl relative z-10">
+      
+      <!-- 4-Step Process Timeline -->
+      <div class="mb-16">
+        <div class="text-center mb-10">
+          <span class="bg-brand-gold/10 text-brand-gold border border-brand-gold/25 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+            Le Parcours d'Intégration
+          </span>
+          <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mt-4">
+            Comment rejoindre la table ?
+          </h2>
+          <div class="w-16 h-[1px] bg-brand-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 relative">
+          <!-- Step 1 -->
+          <div class="glass-card rounded-xl p-5 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-sm font-bold flex items-center justify-center mb-3">1</div>
+              <h4 class="font-heading text-white font-bold text-sm mb-1">1. Regarder la Vidéo</h4>
+              <p class="text-[11px] text-gray-400 leading-relaxed">Visionnez le VSL de présentation ci-dessus pour comprendre la dynamique du club.</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="glass-card rounded-xl p-5 border border-brand-gold/20 relative flex flex-col justify-between">
+            <div class="absolute -top-1 -right-1 bg-brand-gold text-brand-dark text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-widest">Actuel</div>
+            <div>
+              <div class="w-8 h-8 rounded-full bg-brand-gold text-brand-dark text-sm font-bold flex items-center justify-center mb-3">2</div>
+              <h4 class="font-heading text-white font-bold text-sm mb-1">2. Postuler</h4>
+              <p class="text-[11px] text-gray-300 leading-relaxed font-medium">Remplissez le formulaire de vetting juste ci-dessous.</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="glass-card rounded-xl p-5 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-sm font-bold flex items-center justify-center mb-3">3</div>
+              <h4 class="font-heading text-white font-bold text-sm mb-1">3. Appel avec Kevin</h4>
+              <p class="text-[11px] text-gray-400 leading-relaxed">Kevin vous appelle personnellement pour qualifier votre profil et cibler les bonnes connexions.</p>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="glass-card rounded-xl p-5 border border-white/5 relative flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-sm font-bold flex items-center justify-center mb-3">4</div>
+              <h4 class="font-heading text-white font-bold text-sm mb-1">4. Le Dîner Privé</h4>
+              <p class="text-[11px] text-gray-400 leading-relaxed">Une fois accepté, vous recevez les détails du lieu secret et réservez votre siège.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vetting Form Container -->
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-10">
+          <span class="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+            Accès Sélectif (Entrepreneurs à 10k$/mois+)
+          </span>
+          <h3 class="font-heading text-3xl font-bold mt-4 text-white">
+            Demandez Votre Invitation
+          </h3>
+          <p class="text-xs text-gray-400 mt-2 leading-relaxed">
+            Pour préserver la qualité des échanges, chaque table est configurée sur mesure. Remplissez ce formulaire de vetting pour lancer votre demande.
+          </p>
+        </div>
+
+        <!-- Kevin Personal Callout Card -->
+        <div class="mb-10 bg-brand-charcoal text-white rounded-xl p-6 border border-brand-gold/25 shadow-xl flex flex-col md:flex-row items-center gap-6">
+          <div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-brand-gold bg-brand-dark flex items-center justify-center">
+            <img src="assets/ABC logo.png" alt="Kevin Leumassi" class="w-10 h-10 object-contain">
+          </div>
+          <div>
+            <h4 class="font-heading text-base font-bold text-brand-gold mb-1">
+              L'Engagement de Kevin Leumassi
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              « Une fois votre demande soumise, <strong>je vous appellerai personnellement par téléphone</strong> pour en savoir plus sur votre entreprise, comprendre vos défis actuels, et veiller à ce que je rassemble les meilleurs profils complémentaires autour de la table pour maximiser la valeur de vos interactions. »
+            </p>
+          </div>
+        </div>
+
+        <!-- Premium Dark Form -->
+        <div class="glass-card p-8 md:p-10 rounded-2xl shadow-xl relative overflow-hidden border border-white/5">
+          <form id="dinnerApplyForm" class="space-y-6">
+            <div>
+              <label for="fullName" class="block text-xs font-bold uppercase tracking-wider text-brand-gold mb-2">Nom Complet</label>
+              <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 focus:outline-none focus:border-brand-gold text-sm text-white placeholder-gray-500" placeholder="Ex: Jean Tremblay">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="emailAddress" class="block text-xs font-bold uppercase tracking-wider text-brand-gold mb-2">Courriel Professionnel</label>
+                <input type="email" id="emailAddress" name="emailAddress" required class="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 focus:outline-none focus:border-brand-gold text-sm text-white placeholder-gray-500" placeholder="Ex: jean@monentreprise.com">
+              </div>
+              <div>
+                <label for="phoneNumber" class="block text-xs font-bold uppercase tracking-wider text-brand-gold mb-2">Numéro de Téléphone</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required class="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 focus:outline-none focus:border-brand-gold text-sm text-white placeholder-gray-500" placeholder="Ex: 514-123-4567">
+              </div>
+            </div>
+
+            <div>
+              <label for="roleType" class="block text-xs font-bold uppercase tracking-wider text-brand-gold mb-2">Votre Rôle Principal</label>
+              <select id="roleType" name="roleType" required class="w-full px-4 py-3 rounded-lg border border-white/10 bg-brand-charcoal focus:outline-none focus:border-brand-gold text-sm text-white">
+                <option value="" disabled selected>Sélectionnez une option</option>
+                <option value="entrepreneur">Propriétaire d'entreprise / Fondateur (10k$/mois+)</option>
+                <option value="professional">Professionnel corporatif / Cadre</option>
+                <option value="realestate">Courtier / Agent Immobilier</option>
+                <option value="other">Autre professionnel indépendant</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="businessName" class="block text-xs font-bold uppercase tracking-wider text-brand-gold mb-2">Nom de l'entreprise ou employeur</label>
+              <input type="text" id="businessName" name="businessName" class="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 focus:outline-none focus:border-brand-gold text-sm text-white placeholder-gray-500" placeholder="Ex: Acme Inc.">
+            </div>
+
+            <div>
+              <label for="biggestChallenge" class="block text-xs font-bold uppercase tracking-wider text-brand-gold mb-2">Quel est votre plus grand goulot d'étranglement actuellement ?</label>
+              <textarea id="biggestChallenge" name="biggestChallenge" rows="3" required class="w-full px-4 py-3 rounded-lg border border-white/10 bg-white/5 focus:outline-none focus:border-brand-gold text-sm text-white placeholder-gray-500" placeholder="Ex: Trouver de nouveaux clients qualifiés, restructurer mes taxes, gérer ma croissance..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-sm rounded-lg transition transform hover:-translate-y-0.5 uppercase tracking-wide">
+              Soumettre ma demande d'invitation
+            </button>
+          </form>
+          
+          <!-- Success message -->
+          <div id="successMessage" class="hidden text-center py-6 text-green-500 font-semibold">
+            <i class="fa-solid fa-circle-check text-2xl mb-2 block text-brand-gold"></i>
+            Merci ! Votre demande a été transmise. Kevin vous appellera sous peu.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CONCEPT SECTION -->
-  <section id="concept" class="py-24 border-t border-white/5 bg-brand-dark relative">
+  <section id="concept" class="py-24 border-t border-white/5 bg-brand-charcoal/20 relative">
     <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl"></div>
     <div class="container mx-auto px-6 max-w-5xl relative z-10">
       <div class="text-center mb-16">
@@ -210,7 +352,7 @@
   </section>
 
   <!-- HIGHLIGHTS / IMAGE CAROUSEL -->
-  <section class="py-20 bg-brand-charcoal/20 border-y border-white/5">
+  <section class="py-20 bg-brand-dark border-t border-white/5">
     <div class="container mx-auto px-6 max-w-5xl">
       <div class="grid md:grid-cols-5 gap-12 items-center">
         <div class="md:col-span-2">
@@ -268,7 +410,7 @@
   </section>
 
   <!-- WHO IS THIS FOR -->
-  <section class="py-24 bg-brand-dark">
+  <section class="py-24 bg-brand-charcoal/20 border-t border-white/5">
     <div class="container mx-auto px-6 max-w-4xl">
       <div class="text-center mb-16">
         <h2 class="font-heading text-3xl font-bold text-white">À qui s'adressent ces dîners ?</h2>
@@ -296,90 +438,6 @@
           <p class="text-sm text-gray-400 leading-relaxed">
             Fondateurs, dirigeants de PME et d'agences générant <strong>un minimum de 10 000 $ de chiffre d'affaires mensuel</strong> qui souhaitent auditer leurs opérations, optimiser leur acquisition et s'entourer de pairs de même niveau.
           </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REGISTRATION / VETTING FORM -->
-  <section id="reserve" class="py-24 bg-brand-light text-brand-dark">
-    <div class="container mx-auto px-6 max-w-2xl">
-      <div class="text-center mb-12">
-        <span class="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-          Accès Sélectif (Entrepreneurs à 10k$/mois+)
-        </span>
-        <h2 class="font-heading text-3xl md:text-4xl font-bold mt-4 text-brand-dark">
-          Demandez Votre Invitation
-        </h2>
-        <p class="text-sm text-gray-600 mt-4 leading-relaxed">
-          Chaque table est configurée sur mesure pour assurer une alchimie parfaite entre les participants. Remplissez le formulaire ci-dessous pour lancer le processus.
-        </p>
-      </div>
-
-      <!-- Kevin Personal Callout Card -->
-      <div class="mb-8 bg-brand-charcoal text-white rounded-xl p-6 border border-brand-gold/25 shadow-lg flex flex-col md:flex-row items-center gap-6">
-        <div class="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-brand-gold bg-brand-dark flex items-center justify-center">
-          <img src="assets/ABC logo.png" alt="Kevin Leumassi" class="w-10 h-10 object-contain">
-        </div>
-        <div>
-          <h4 class="font-heading text-base font-bold text-brand-gold mb-1">
-            L'Engagement de Kevin Leumassi
-          </h4>
-          <p class="text-xs text-gray-400 leading-relaxed">
-            « Une fois votre demande soumise, <strong>je vous appellerai personnellement par téléphone</strong> pour en savoir plus sur votre entreprise, comprendre vos défis actuels, et veiller à ce que je rassemble les meilleurs profils complémentaires autour de la table pour maximiser la valeur de vos interactions. »
-          </p>
-        </div>
-      </div>
-
-      <!-- Vetting Form Container -->
-      <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 shadow-xl">
-        <form id="dinnerApplyForm" class="space-y-6">
-          <div>
-            <label for="fullName" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Nom Complet</label>
-            <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: Jean Tremblay">
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <label for="emailAddress" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Courriel Professionnel</label>
-              <input type="email" id="emailAddress" name="emailAddress" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: jean@monentreprise.com">
-            </div>
-            <div>
-              <label for="phoneNumber" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Numéro de Téléphone</label>
-              <input type="tel" id="phoneNumber" name="phoneNumber" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: 514-123-4567">
-            </div>
-          </div>
-
-          <div>
-            <label for="roleType" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Votre Rôle Principal</label>
-            <select id="roleType" name="roleType" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm bg-white">
-              <option value="" disabled selected>Sélectionnez une option</option>
-              <option value="entrepreneur">Propriétaire d'entreprise / Fondateur</option>
-              <option value="professional">Professionnel corporatif / Cadre</option>
-              <option value="realestate">Courtier / Agent Immobilier</option>
-              <option value="other">Autre professionnel indépendant</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="businessName" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Nom de l'entreprise ou employeur</label>
-            <input type="text" id="businessName" name="businessName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: Acme Inc.">
-          </div>
-
-          <div>
-            <label for="biggestChallenge" class="block text-xs font-bold uppercase tracking-wider text-gray-600 mb-2">Quel est votre plus grand goulot d'étranglement actuellement ?</label>
-            <textarea id="biggestChallenge" name="biggestChallenge" rows="3" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-gold text-sm" placeholder="Ex: Trouver de nouveaux clients qualifiés, restructurer mes taxes, gérer ma croissance..."></textarea>
-          </div>
-
-          <button type="submit" class="w-full py-4 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-sm rounded-lg transition transform hover:-translate-y-0.5 uppercase tracking-wide">
-            Soumettre ma demande d'invitation
-          </button>
-        </form>
-        
-        <!-- Success message -->
-        <div id="successMessage" class="hidden text-center py-6 text-green-600 font-semibold">
-          <i class="fa-solid fa-circle-check text-2xl mb-2 block"></i>
-          Merci ! Votre demande a été transmise. Nous vous contacterons sous peu.
         </div>
       </div>
     </div>
