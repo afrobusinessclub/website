@@ -82,6 +82,12 @@
       transform: translate(-50%, -50%);
       pointer-events: none;
     }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary {
+      list-style: none;
+    }
   </style>
 </head>
 <body class="font-body text-gray-300 bg-brand-dark antialiased">
@@ -139,16 +145,16 @@
     </div>
 
     <!-- Subtle Glow Effects -->
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl"></div>
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl pointer-events-none"></div>
 
     <div class="container mx-auto px-6 relative z-10 max-w-4xl text-center">
-      <h1 class="font-heading text-4xl md:text-6xl font-bold leading-tight mb-4 text-white">
-        Dîners Privés &amp; Masterclasses
+      <h1 class="font-heading text-3xl md:text-5xl font-bold leading-tight mb-4 text-white">
+        Prenez place à la table des leaders de Montréal
       </h1>
       
       <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto">
-        Un dîner d'affaires, du networking et une masterclass pour propulser votre croissance.
+        Un dîner privé ultra-qualifié, du networking d'élite et une masterclass stratégique pour résoudre vos goulots d'étranglement en direct.
       </p>
 
       <div class="w-24 h-[1px] bg-brand-gold mx-auto mb-8"></div>
@@ -181,12 +187,160 @@
     </div>
   </header>
 
-  <!-- SECTION 2: 3-STEP PROCESS & APPLICATION FORM -->
-  <section id="reserve" class="py-12 md:py-24 border-t border-white/5 bg-brand-dark relative">
+  <!-- HIGHLIGHTS / IMAGE CAROUSEL (atmosphere section) -->
+  <section class="py-12 md:py-20 bg-brand-charcoal/20 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading text-3xl font-bold text-white mb-6">
+          L'atmosphère de nos soirées
+        </h2>
+        <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto text-sm mb-0">
+          Pas de théorie académique ou de présentations corporatives ennuyeuses. Nos dîners sont vivants, animés et centrés sur des solutions exploitables immédiatement.
+        </p>
+      </div>
+
+      <!-- Row 1: Horizontal Videos (2 columns on desktop, 1 column on mobile) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <!-- Video H1 (Always visible) -->
+        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover cursor-pointer" onclick="togglePlayer('player-H1', 'UdeICLpiMc8', this)">
+          <!-- YouTube Iframe replacement target with scale crop -->
+          <div class="absolute inset-0 pointer-events-none overflow-hidden" style="transform: scale(1.14);">
+            <div id="player-H1" class="w-full h-full"></div>
+          </div>
+          
+          <!-- Custom Play/Pause Overlay -->
+          <div class="video-play-overlay absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+            <div class="play-icon w-12 h-12 rounded-full bg-brand-gold/90 text-brand-dark flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
+              <i class="fa-solid fa-play ml-1"></i>
+            </div>
+          </div>
+
+          <!-- Title Label -->
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none z-20">
+            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Dîner &amp; Connexions
+          </div>
+        </div>
+
+        <!-- Video H2 (Hidden on mobile, visible on desktop) -->
+        <div class="hidden md:block glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover cursor-pointer" onclick="togglePlayer('player-H2', 'mdO_z-W4t-w', this)">
+          <!-- YouTube Iframe replacement target with scale crop -->
+          <div class="absolute inset-0 pointer-events-none overflow-hidden" style="transform: scale(1.14);">
+            <div id="player-H2" class="w-full h-full"></div>
+          </div>
+          
+          <!-- Custom Play/Pause Overlay -->
+          <div class="video-play-overlay absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+            <div class="play-icon w-12 h-12 rounded-full bg-brand-gold/90 text-brand-dark flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
+              <i class="fa-solid fa-play ml-1"></i>
+            </div>
+          </div>
+
+          <!-- Title Label -->
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none z-20">
+            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Masterclass Stratégique
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Vertical Videos (4 columns on desktop, 2 columns on mobile) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <!-- Video V1 (Always visible) -->
+        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover cursor-pointer" onclick="togglePlayer('player-V1', 'gokSqITRs9k', this)">
+          <!-- YouTube Iframe replacement target with scale crop -->
+          <div class="absolute inset-0 pointer-events-none overflow-hidden" style="transform: scale(1.14);">
+            <div id="player-V1" class="w-full h-full"></div>
+          </div>
+
+          <!-- Custom Play/Pause Overlay -->
+          <div class="video-play-overlay absolute inset-0 flex items-center justify-center bg-black/20 opacity-100 transition-opacity duration-300 z-10">
+            <div class="play-icon w-12 h-12 rounded-full bg-brand-gold/90 text-brand-dark flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
+              <i class="fa-solid fa-play ml-1"></i>
+            </div>
+          </div>
+
+          <!-- Title Label -->
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none z-20">
+            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Story / Ambiance
+          </div>
+        </div>
+
+        <!-- Video V2 (Always visible) -->
+        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover cursor-pointer" onclick="togglePlayer('player-V2', 'w6qX5zhN3Vw', this)">
+          <!-- YouTube Iframe replacement target with scale crop -->
+          <div class="absolute inset-0 pointer-events-none overflow-hidden" style="transform: scale(1.14);">
+            <div id="player-V2" class="w-full h-full"></div>
+          </div>
+
+          <!-- Custom Play/Pause Overlay -->
+          <div class="video-play-overlay absolute inset-0 flex items-center justify-center bg-black/20 opacity-100 transition-opacity duration-300 z-10">
+            <div class="play-icon w-12 h-12 rounded-full bg-brand-gold/90 text-brand-dark flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
+              <i class="fa-solid fa-play ml-1"></i>
+            </div>
+          </div>
+
+          <!-- Title Label -->
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none z-20">
+            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Story / Échanges
+          </div>
+        </div>
+
+        <!-- Video V3 (Hidden on mobile, visible on desktop) -->
+        <div class="hidden md:block glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover cursor-pointer" onclick="togglePlayer('player-V3', 'fW4ci1ImZlA', this)">
+          <!-- YouTube Iframe replacement target with scale crop -->
+          <div class="absolute inset-0 pointer-events-none overflow-hidden" style="transform: scale(1.14);">
+            <div id="player-V3" class="w-full h-full"></div>
+          </div>
+
+          <!-- Custom Play/Pause Overlay -->
+          <div class="video-play-overlay absolute inset-0 flex items-center justify-center bg-black/20 opacity-100 transition-opacity duration-300 z-10">
+            <div class="play-icon w-12 h-12 rounded-full bg-brand-gold/90 text-brand-dark flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
+              <i class="fa-solid fa-play ml-1"></i>
+            </div>
+          </div>
+
+          <!-- Title Label -->
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none z-20">
+            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Ambiance Mastermind
+          </div>
+        </div>
+
+        <!-- Video V4 (Hidden on mobile, visible on desktop) -->
+        <div class="hidden md:block glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover cursor-pointer" onclick="togglePlayer('player-V4', 'qHvY_JprIdI', this)">
+          <!-- YouTube Iframe replacement target with scale crop -->
+          <div class="absolute inset-0 pointer-events-none overflow-hidden" style="transform: scale(1.14);">
+            <div id="player-V4" class="w-full h-full"></div>
+          </div>
+
+          <!-- Custom Play/Pause Overlay -->
+          <div class="video-play-overlay absolute inset-0 flex items-center justify-center bg-black/20 opacity-100 transition-opacity duration-300 z-10">
+            <div class="play-icon w-12 h-12 rounded-full bg-brand-gold/90 text-brand-dark flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
+              <i class="fa-solid fa-play ml-1"></i>
+            </div>
+          </div>
+
+          <!-- Title Label -->
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none z-20">
+            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Moments Forts
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA at the end of section -->
+      <div class="flex justify-center mt-12">
+        <a href="#reserve" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-xs px-6 py-3.5 rounded-md shadow-lg transition transform hover:-translate-y-0.5 uppercase tracking-[0.1em]">
+          Réserver ma place
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION: 3-STEP PROCESS -->
+  <section class="py-12 md:py-20 border-t border-white/5 bg-brand-dark/40 relative">
     <div class="container mx-auto px-6 max-w-4xl relative z-10">
       
       <!-- 3-Step Wizard Progress Bar -->
-      <div class="mb-10 md:mb-16 max-w-3xl mx-auto">
+      <div class="max-w-3xl mx-auto">
         <div class="text-center mb-10">
           <span class="bg-brand-gold/10 text-brand-gold border border-brand-gold/25 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
             Nous rejoindre
@@ -244,6 +398,100 @@
         </div>
       </div>
 
+      <!-- CTA at the end of section -->
+      <div class="flex justify-center mt-12">
+        <a href="#reserve" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-xs px-6 py-3.5 rounded-md shadow-lg transition transform hover:-translate-y-0.5 uppercase tracking-[0.1em]">
+          Réserver ma place
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="py-12 md:py-20 bg-brand-dark border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading text-3xl font-bold text-white mb-6">
+          Ce qu'en disent les précédents participants
+        </h2>
+        <div class="w-24 h-[1px] bg-brand-gold mx-auto mb-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="glass-card rounded-2xl p-8 border border-white/5 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex gap-1 text-brand-gold mb-4 text-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs md:text-sm text-gray-400 italic leading-relaxed mb-6">
+              "Le format d'analyse en direct (Hot Seat) m'a permis de débloquer ma stratégie d'acquisition de clients en 15 minutes. Les échanges autour de la table sont d'un niveau rare à Montréal. Pas de blabla, que du concret."
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-sm">Sandrine K.</h4>
+            <p class="text-[10px] text-brand-gold mt-1">Fondatrice d'une agence de recrutement</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="glass-card rounded-2xl p-8 border border-white/5 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex gap-1 text-brand-gold mb-4 text-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs md:text-sm text-gray-400 italic leading-relaxed mb-6">
+              "J'ai trouvé un partenaire stratégique dès mon premier dîner. L'atmosphère est à la fois intime et hautement professionnelle. On sent immédiatement la rigueur de la sélection des profils autour de la table."
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-sm">Patrice M.</h4>
+            <p class="text-[10px] text-brand-gold mt-1">Courtier immobilier &amp; Investisseur</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="glass-card rounded-2xl p-8 border border-white/5 flex flex-col justify-between h-full">
+          <div>
+            <div class="flex gap-1 text-brand-gold mb-4 text-sm">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-xs md:text-sm text-gray-400 italic leading-relaxed mb-6">
+              "Ces dîners sont de véritables conseils d'administration temporaires. On vient avec nos vrais chiffres, nos vrais problèmes, et on repart avec des solutions immédiates testées par nos pairs."
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-sm">Fiona T.</h4>
+            <p class="text-[10px] text-brand-gold mt-1">Directrice des opérations Tech</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA at the end of section -->
+      <div class="flex justify-center mt-12">
+        <a href="#reserve" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-xs px-6 py-3.5 rounded-md shadow-lg transition transform hover:-translate-y-0.5 uppercase tracking-[0.1em]">
+          Réserver ma place
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: APPLICATION FORM -->
+  <section id="reserve" class="py-12 md:py-20 border-t border-white/5 bg-brand-dark relative">
+    <div class="container mx-auto px-6 max-w-4xl relative z-10">
+      
       <!-- Vetting Form Container -->
       <div class="max-w-2xl mx-auto">
         <div class="text-center mb-10">
@@ -261,146 +509,78 @@
     </div>
   </section>
 
-  <!-- HIGHLIGHTS / IMAGE CAROUSEL (atmosphere section moved right after the form) -->
-  <section class="py-12 md:py-20 bg-brand-charcoal/20 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-5xl">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-heading text-3xl font-bold text-white mb-6">
-          L'atmosphère de nos soirées
-        </h2>
-        <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto text-sm mb-0">
-          Pas de théorie académique ou de présentations corporatives ennuyeuses. Nos dîners sont vivants, animés et centrés sur des solutions exploitables immédiatement.
-        </p>
-      </div>
-
-      <!-- Row 1: Horizontal Videos (2 columns on desktop, 1 column on mobile) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <!-- Video H1 (Always visible) -->
-        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover">
-          <iframe 
-            src="https://www.youtube.com/embed/UdeICLpiMc8?autoplay=1&mute=1&loop=1&playlist=UdeICLpiMc8&controls=0&playsinline=1&enablejsapi=1" 
-            title="Afro Business Club H1"
-            class="w-full h-full absolute inset-0 border-0 pointer-events-none" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Dîner &amp; Connexions
-          </div>
-        </div>
-
-        <!-- Video H2 (Hidden on mobile, visible on desktop) -->
-        <div class="hidden md:block glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover">
-          <iframe 
-            src="https://www.youtube.com/embed/mdO_z-W4t-w?autoplay=1&mute=1&loop=1&playlist=mdO_z-W4t-w&controls=0&playsinline=1&enablejsapi=1" 
-            title="Afro Business Club H2"
-            class="w-full h-full absolute inset-0 border-0 pointer-events-none" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Masterclass Stratégique
-          </div>
-        </div>
-      </div>
-
-      <!-- Row 2: Vertical Videos (4 columns on desktop, 2 columns on mobile) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <!-- Video V1 (Always visible) -->
-        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover">
-          <iframe 
-            src="https://www.youtube.com/embed/gokSqITRs9k?autoplay=1&mute=1&loop=1&playlist=gokSqITRs9k&controls=0&playsinline=1&enablejsapi=1" 
-            title="Afro Business Club V1"
-            class="w-full h-full absolute inset-0 border-0 pointer-events-none" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Story / Ambiance
-          </div>
-        </div>
-
-        <!-- Video V2 (Always visible) -->
-        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover">
-          <iframe 
-            src="https://www.youtube.com/embed/w6qX5zhN3Vw?autoplay=1&mute=1&loop=1&playlist=w6qX5zhN3Vw&controls=0&playsinline=1&enablejsapi=1" 
-            title="Afro Business Club V2"
-            class="w-full h-full absolute inset-0 border-0 pointer-events-none" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Story / Échanges
-          </div>
-        </div>
-
-        <!-- Video V3 (Hidden on mobile, visible on desktop) -->
-        <div class="hidden md:block glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover">
-          <iframe 
-            src="https://www.youtube.com/embed/fW4ci1ImZlA?autoplay=1&mute=1&loop=1&playlist=fW4ci1ImZlA&controls=0&playsinline=1&enablejsapi=1" 
-            title="Afro Business Club V3"
-            class="w-full h-full absolute inset-0 border-0 pointer-events-none" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Ambiance Mastermind
-          </div>
-        </div>
-
-        <!-- Video V4 (Hidden on mobile, visible on desktop) -->
-        <div class="hidden md:block glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover">
-          <iframe 
-            src="https://www.youtube.com/embed/qHvY_JprIdI?autoplay=1&mute=1&loop=1&playlist=qHvY_JprIdI&controls=0&playsinline=1&enablejsapi=1" 
-            title="Afro Business Club V4"
-            class="w-full h-full absolute inset-0 border-0 pointer-events-none" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Moments Forts
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO IS THIS FOR -->
-  <section class="py-12 md:py-24 bg-brand-charcoal/20 border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-4xl">
+  <!-- FAQ SECTION -->
+  <section class="py-12 md:py-20 bg-brand-charcoal/10 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-3xl">
       <div class="text-center mb-16">
-        <h2 class="font-heading text-3xl font-bold text-white">À qui s'adressent ces dîners ?</h2>
-        <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
+        <span class="bg-brand-gold/10 text-brand-gold border border-brand-gold/25 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          Des réponses à vos questions
+        </span>
+        <h2 class="font-heading text-3xl font-bold text-white mt-4">
+          Questions Fréquentes
+        </h2>
+        <div class="w-16 h-[1px] bg-brand-gold mx-auto mt-4"></div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- For 1 -->
-        <div class="border border-white/5 bg-brand-charcoal/30 rounded-2xl p-8">
-          <h3 class="font-heading text-xl font-bold text-brand-gold mb-4 flex items-center gap-3">
-            <i class="fa-solid fa-user-tie"></i>
-            Professionnels &amp; Cadres
-          </h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Professionnels corporatifs, courtiers immobiliers, directeurs et experts sectoriels cherchant à élargir leur champ de compétences stratégiques et à bâtir un carnet de contacts de premier ordre.
-          </p>
-        </div>
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="group glass-card rounded-xl border border-white/5 transition-all duration-300 open:border-brand-gold/30">
+          <summary class="flex justify-between items-center p-6 text-white font-semibold cursor-pointer list-none select-none">
+            <span class="text-sm md:text-base pr-4">Quel est l'objectif principal de ces dîners ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-gold">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-gray-400 border-t border-white/5 pt-4 leading-relaxed">
+            L'objectif est double : vous permettre de bâtir des relations de confiance avec d'autres entrepreneurs de haut niveau à Montréal, et résoudre vos goulots d'étranglement stratégiques (financement, recrutement, acquisition, opérations) grâce à des retours d'expérience concrets et sans tabou de vos pairs.
+          </div>
+        </details>
 
-        <!-- For 2 -->
-        <div class="border border-white/5 bg-brand-charcoal/30 rounded-2xl p-8">
-          <h3 class="font-heading text-xl font-bold text-brand-gold mb-4 flex items-center gap-3">
-            <i class="fa-solid fa-store"></i>
-            Propriétaires d'entreprise
-          </h3>
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Fondateurs, propriétaires et dirigeants de PME qui souhaitent auditer leurs opérations, optimiser leur acquisition et s'entourer de pairs de même niveau.
-          </p>
-        </div>
+        <!-- FAQ 2 -->
+        <details class="group glass-card rounded-xl border border-white/5 transition-all duration-300 open:border-brand-gold/30">
+          <summary class="flex justify-between items-center p-6 text-white font-semibold cursor-pointer list-none select-none">
+            <span class="text-sm md:text-base pr-4">Comment fonctionne le processus de sélection ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-gold">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-gray-400 border-t border-white/5 pt-4 leading-relaxed">
+            Chaque table est minutieusement composée. Après réception de votre candidature via le formulaire, Kevin vous contacte pour un appel de qualification. L'objectif est d'assembler des profils de haut niveau partageant des défis de croissance et une ambition similaires, afin de maximiser la valeur des échanges stratégiques durant la soirée.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group glass-card rounded-xl border border-white/5 transition-all duration-300 open:border-brand-gold/30">
+          <summary class="flex justify-between items-center p-6 text-white font-semibold cursor-pointer list-none select-none">
+            <span class="text-sm md:text-base pr-4">Les dîners sont-ils payants ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-gold">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-gray-400 border-t border-white/5 pt-4 leading-relaxed">
+            Oui, la participation aux dîners privés implique une PAF (Participation Aux Frais) qui couvre le repas gastronomique complet (entrée, plat, dessert, vins fins sélectionnés) dans un salon privé d'un des meilleurs restaurants de Montréal. Le montant exact et les modalités d'inscription vous seront communiqués lors de l'appel de validation.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group glass-card rounded-xl border border-white/5 transition-all duration-300 open:border-brand-gold/30">
+          <summary class="flex justify-between items-center p-6 text-white font-semibold cursor-pointer list-none select-none">
+            <span class="text-sm md:text-base pr-4">Quel est le format d'une soirée type ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 text-brand-gold">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-sm text-gray-400 border-t border-white/5 pt-4 leading-relaxed">
+            La soirée commence à 18h30 par un cocktail de réseautage informel. Ensuite, nous passons à table dans le salon privé. Durant le dîner, Kevin anime une masterclass interactive et chaque participant passe en "Hot Seat" : il présente son plus grand défi actuel et bénéficie de l'intelligence collective de la table pour le résoudre.
+          </div>
+        </details>
+      </div>
+
+      <!-- CTA at the end of section -->
+      <div class="flex justify-center mt-12">
+        <a href="#reserve" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-xs px-6 py-3.5 rounded-md shadow-lg transition transform hover:-translate-y-0.5 uppercase tracking-[0.1em]">
+          Réserver ma place
+        </a>
       </div>
     </div>
   </section>
@@ -468,6 +648,141 @@
       }
     });
 
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // YouTube Iframe Player API Integration for custom Play/Pause controls
+    const players = {};
+
+    // Load YouTube API script dynamically
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Callback when API is ready
+    window.onYouTubeIframeAPIReady = function() {
+      const isMobile = window.innerWidth < 768;
+
+      // Horizontal Video H1 (Autoplay)
+      const h1Container = document.getElementById('player-H1')?.closest('.glass-card');
+      if (h1Container) {
+        initializePlayer('player-H1', 'UdeICLpiMc8', h1Container, true);
+      }
+      
+      // Horizontal Video H2 (Autoplay, hidden on mobile)
+      const h2Container = document.getElementById('player-H2')?.closest('.glass-card');
+      if (h2Container) {
+        initializePlayer('player-H2', 'mdO_z-W4t-w', h2Container, true);
+      }
+
+      // Vertical Video V1 (Autoplay on mobile, paused on desktop)
+      const v1Container = document.getElementById('player-V1')?.closest('.glass-card');
+      if (v1Container) {
+        initializePlayer('player-V1', 'gokSqITRs9k', v1Container, isMobile);
+      }
+
+      // Vertical Video V2 (Autoplay on mobile, paused on desktop)
+      const v2Container = document.getElementById('player-V2')?.closest('.glass-card');
+      if (v2Container) {
+        initializePlayer('player-V2', 'w6qX5zhN3Vw', v2Container, isMobile);
+      }
+
+      // Vertical Video V3 (Paused, hidden on mobile)
+      const v3Container = document.getElementById('player-V3')?.closest('.glass-card');
+      if (v3Container) {
+        initializePlayer('player-V3', 'fW4ci1ImZlA', v3Container, false);
+      }
+
+      // Vertical Video V4 (Paused, hidden on mobile)
+      const v4Container = document.getElementById('player-V4')?.closest('.glass-card');
+      if (v4Container) {
+        initializePlayer('player-V4', 'qHvY_JprIdI', v4Container, false);
+      }
+    };
+
+    function initializePlayer(elementId, videoId, container, shouldAutoplay) {
+      const overlay = container.querySelector(".video-play-overlay");
+      const playIcon = container.querySelector(".play-icon i");
+
+      players[elementId] = new YT.Player(elementId, {
+        videoId: videoId,
+        playerVars: {
+          autoplay: shouldAutoplay ? 1 : 0,
+          mute: 1, // Enforce permanently muted state
+          loop: 1,
+          playlist: videoId,
+          controls: 0,
+          rel: 0,
+          modestbranding: 1,
+          playsinline: 1
+        },
+        events: {
+          onReady: (event) => {
+            if (shouldAutoplay) {
+              event.target.playVideo();
+              setVideoPlayingState(container, overlay, playIcon);
+            } else {
+              setVideoPausedState(container, overlay, playIcon);
+            }
+          },
+          onStateChange: (event) => {
+            if (event.data === YT.PlayerState.PLAYING) {
+              setVideoPlayingState(container, overlay, playIcon);
+            } else if (event.data === YT.PlayerState.PAUSED) {
+              setVideoPausedState(container, overlay, playIcon);
+            }
+          }
+        }
+      });
+    }
+
+    function togglePlayer(elementId, videoId, container) {
+      let player = players[elementId];
+      if (!player) return;
+
+      const overlay = container.querySelector(".video-play-overlay");
+      const playIcon = container.querySelector(".play-icon i");
+
+      const state = player.getPlayerState();
+      if (state === YT.PlayerState.PLAYING) {
+        player.pauseVideo();
+        setVideoPausedState(container, overlay, playIcon);
+      } else {
+        player.playVideo();
+        // Muted permanently (no player.unMute() call)
+        setVideoPlayingState(container, overlay, playIcon);
+      }
+    }
+
+    function setVideoPlayingState(container, overlay, playIcon) {
+      if (playIcon) playIcon.className = "fa-solid fa-pause";
+      if (overlay) {
+        overlay.style.opacity = "";
+        overlay.style.backdropFilter = "";
+        overlay.style.webkitBackdropFilter = "";
+        overlay.style.backgroundColor = "";
+      }
+    }
+
+    function setVideoPausedState(container, overlay, playIcon) {
+      if (playIcon) playIcon.className = "fa-solid fa-play ml-1";
+      if (overlay) {
+        overlay.style.opacity = "1";
+        overlay.style.backdropFilter = "blur(4px)";
+        overlay.style.webkitBackdropFilter = "blur(4px)";
+        overlay.style.backgroundColor = "rgba(5, 5, 5, 0.5)";
+      }
+    }
   </script>
 </body>
 </html>
