@@ -155,7 +155,7 @@
 
       <div class="flex justify-center mt-6">
         <a href="#reserve" class="inline-flex items-center gap-2 bg-brand-gold hover:bg-yellow-600 text-brand-dark font-bold text-sm px-6 py-3 rounded-md shadow-lg transition transform hover:-translate-y-0.5 uppercase tracking-[0.1em]">
-          Je participe
+          Réserver ma place
         </a>
       </div>
     </div>
@@ -294,8 +294,124 @@
     </div>
   </section>
 
+  <!-- HIGHLIGHTS / IMAGE CAROUSEL (atmosphere section moved right after the form) -->
+  <section class="py-20 bg-brand-charcoal/20 border-t border-white/5">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-heading text-3xl font-bold text-white mb-6">
+          L'atmosphère de nos soirées
+        </h2>
+        <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto text-sm mb-8">
+          Pas de théorie académique ou de présentations corporatives ennuyeuses. Nos dîners sont vivants, animés et centrés sur des solutions exploitables immédiatement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+          <div class="flex items-center gap-2.5">
+            <i class="fa-regular fa-circle-check text-brand-gold text-base"></i>
+            <span class="text-xs font-semibold text-white uppercase tracking-wider">Sélection sur candidature</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i class="fa-regular fa-circle-check text-brand-gold text-base"></i>
+            <span class="text-xs font-semibold text-white uppercase tracking-wider">Lieux uniques &amp; confidentiels</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i class="fa-regular fa-circle-check text-brand-gold text-base"></i>
+            <span class="text-xs font-semibold text-white uppercase tracking-wider">Intervenants experts du terrain</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Masonry Video Grid (Vertical & Horizontal mix - 5 Videos) -->
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_auto]">
+        <!-- Video 1 (Horizontal) -->
+        <div class="break-inside-avoid mb-6 glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover">
+          <video 
+            class="w-full h-full object-cover" 
+            controls 
+            preload="metadata" 
+            poster="assets/29-IMG_4344.jpg" 
+            loop 
+            muted>
+            <source src="assets/dinner/ADS_1557.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
+            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Dîner &amp; Connexions
+          </div>
+        </div>
+
+        <!-- Video 2 (Vertical crop) -->
+        <div class="break-inside-avoid mb-6 glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover">
+          <video 
+            class="w-full h-full object-cover" 
+            controls 
+            preload="metadata" 
+            poster="assets/Mastermind/60-IMG_9463.jpg" 
+            loop 
+            muted>
+            <source src="assets/dinner/ADS_1557.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
+            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Story / Ambiance
+          </div>
+        </div>
+
+        <!-- Video 3 (Horizontal) -->
+        <div class="break-inside-avoid mb-6 glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover">
+          <video 
+            class="w-full h-full object-cover" 
+            controls 
+            preload="metadata" 
+            poster="assets/40-IMG_4370.jpg" 
+            loop 
+            muted>
+            <source src="assets/dinner/Entrepreneur Event 1561.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
+            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Masterclass Stratégique
+          </div>
+        </div>
+
+        <!-- Video 4 (Vertical crop) -->
+        <div class="break-inside-avoid mb-6 glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-[9/16] relative group glass-card-hover">
+          <video 
+            class="w-full h-full object-cover" 
+            controls 
+            preload="metadata" 
+            poster="assets/Mastermind/64-IMG_9473.jpg" 
+            loop 
+            muted>
+            <source src="assets/dinner/Entrepreneur Event.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
+            <i class="fa-solid fa-mobile-screen-button text-brand-gold mr-1.5"></i> Story / Échanges
+          </div>
+        </div>
+
+        <!-- Video 5 (Horizontal) -->
+        <div class="break-inside-avoid mb-6 glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover">
+          <video 
+            class="w-full h-full object-cover" 
+            controls 
+            preload="metadata" 
+            poster="assets/42-IMG_4372.jpg" 
+            loop 
+            muted>
+            <source src="assets/dinner/Entrepreneur Event.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
+            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Networking d'Élite
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONCEPT SECTION -->
-  <section id="concept" class="py-24 border-t border-white/5 bg-brand-charcoal/20 relative">
+  <section id="concept" class="py-24 border-t border-white/5 bg-brand-dark relative">
     <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-gold/5 rounded-full filter blur-3xl"></div>
     <div class="container mx-auto px-6 max-w-5xl relative z-10">
       <div class="text-center mb-16">
@@ -336,89 +452,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- HIGHLIGHTS / IMAGE CAROUSEL -->
-  <section class="py-20 bg-brand-dark border-t border-white/5">
-    <div class="container mx-auto px-6 max-w-5xl">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-heading text-3xl font-bold text-white mb-6">
-          L'atmosphère de nos soirées
-        </h2>
-        <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto text-sm mb-8">
-          Pas de théorie académique ou de présentations corporatives ennuyeuses. Nos dîners sont vivants, animés et centrés sur des solutions exploitables immédiatement.
-        </p>
-        <div class="flex flex-wrap justify-center gap-6 md:gap-10">
-          <div class="flex items-center gap-2.5">
-            <i class="fa-regular fa-circle-check text-brand-gold text-base"></i>
-            <span class="text-xs font-semibold text-white uppercase tracking-wider">Sélection sur candidature</span>
-          </div>
-          <div class="flex items-center gap-2.5">
-            <i class="fa-regular fa-circle-check text-brand-gold text-base"></i>
-            <span class="text-xs font-semibold text-white uppercase tracking-wider">Lieux uniques &amp; confidentiels</span>
-          </div>
-          <div class="flex items-center gap-2.5">
-            <i class="fa-regular fa-circle-check text-brand-gold text-base"></i>
-            <span class="text-xs font-semibold text-white uppercase tracking-wider">Intervenants experts du terrain</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video Grid (3 Widescreen Videos) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Video 1 -->
-        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover">
-          <video 
-            class="w-full h-full object-cover" 
-            controls 
-            preload="metadata" 
-            poster="assets/29-IMG_4344.jpg" 
-            loop 
-            muted>
-            <source src="assets/dinner/ADS_1557.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Dîner &amp; Connexions
-          </div>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover">
-          <video 
-            class="w-full h-full object-cover" 
-            controls 
-            preload="metadata" 
-            poster="assets/40-IMG_4370.jpg" 
-            loop 
-            muted>
-            <source src="assets/dinner/Entrepreneur Event 1561.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Masterclass Stratégique
-          </div>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-black aspect-video relative group glass-card-hover">
-          <video 
-            class="w-full h-full object-cover" 
-            controls 
-            preload="metadata" 
-            poster="assets/42-IMG_4372.jpg" 
-            loop 
-            muted>
-            <source src="assets/dinner/Entrepreneur Event.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded border border-white/10 uppercase tracking-widest pointer-events-none">
-            <i class="fa-solid fa-film text-brand-gold mr-1.5"></i> Networking d'Élite
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- WHO IS THIS FOR -->
   <section class="py-24 bg-brand-charcoal/20 border-t border-white/5">
