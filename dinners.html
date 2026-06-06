@@ -716,7 +716,6 @@
       const playIcon = container.querySelector(".play-icon i");
 
       players[elementId] = new YT.Player(elementId, {
-        host: 'https://www.youtube-nocookie.com',
         videoId: videoId,
         playerVars: {
           autoplay: shouldAutoplay ? 1 : 0,
